@@ -1,0 +1,242 @@
+{
+  "classification": "BOUNDED_LOCAL_STATIC_BROWSER_BENCHMARK",
+  "checked_at": "2026-11-11T14:28:47.554Z",
+  "node": "v22.19.0",
+  "platform": "win32",
+  "cpu": "AMD Ryzen 5 5500U with Radeon Graphics         ",
+  "browser": "153.0.8010.12",
+  "viewport": "1440x900; comprehension proxy 390x844",
+  "network": "loopback; no CPU/network throttling",
+  "loads": [
+    {
+      "fresh_context": 0,
+      "ready_ms": 458.0820000000001,
+      "dom_content_loaded_ms": 58.10000002384186,
+      "resource_count": 22,
+      "encoded_resource_bytes": 895219,
+      "js_encoded_bytes": 508915
+    },
+    {
+      "fresh_context": 1,
+      "ready_ms": 391.1385,
+      "dom_content_loaded_ms": 47.200000047683716,
+      "resource_count": 21,
+      "encoded_resource_bytes": 877890,
+      "js_encoded_bytes": 491586
+    },
+    {
+      "fresh_context": 2,
+      "ready_ms": 442.9841999999999,
+      "dom_content_loaded_ms": 135.90000009536743,
+      "resource_count": 22,
+      "encoded_resource_bytes": 895219,
+      "js_encoded_bytes": 508915
+    },
+    {
+      "fresh_context": 3,
+      "ready_ms": 420.7442000000001,
+      "dom_content_loaded_ms": 47.700000047683716,
+      "resource_count": 22,
+      "encoded_resource_bytes": 895219,
+      "js_encoded_bytes": 508915
+    },
+    {
+      "fresh_context": 4,
+      "ready_ms": 384.3332999999998,
+      "dom_content_loaded_ms": 44.5,
+      "resource_count": 21,
+      "encoded_resource_bytes": 877890,
+      "js_encoded_bytes": 491586
+    }
+  ],
+  "interactions": [
+    {
+      "kind": "case_selection",
+      "ms": 89.41420000000016
+    },
+    {
+      "kind": "case_selection",
+      "ms": 51.8764000000001
+    },
+    {
+      "kind": "case_selection",
+      "ms": 48.86169999999947
+    },
+    {
+      "kind": "case_selection",
+      "ms": 50.25470000000041
+    },
+    {
+      "kind": "case_selection",
+      "ms": 46.26340000000073
+    },
+    {
+      "kind": "case_selection",
+      "ms": 52.55829999999969
+    },
+    {
+      "kind": "case_selection",
+      "ms": 49.03740000000016
+    },
+    {
+      "kind": "case_selection",
+      "ms": 52.16820000000007
+    },
+    {
+      "kind": "case_selection",
+      "ms": 51.731699999999364
+    },
+    {
+      "kind": "case_selection",
+      "ms": 46.65219999999954
+    },
+    {
+      "kind": "case_selection",
+      "ms": 49.767800000000534
+    },
+    {
+      "kind": "case_selection",
+      "ms": 49.582000000000335
+    },
+    {
+      "kind": "case_selection",
+      "ms": 50.510699999999815
+    },
+    {
+      "kind": "case_selection",
+      "ms": 49.4982
+    },
+    {
+      "kind": "case_selection",
+      "ms": 50.277000000000044
+    },
+    {
+      "kind": "case_selection",
+      "ms": 52.005700000000616
+    },
+    {
+      "kind": "case_selection",
+      "ms": 53.64180000000033
+    },
+    {
+      "kind": "case_selection",
+      "ms": 44.45640000000003
+    },
+    {
+      "kind": "case_selection",
+      "ms": 48.95679999999993
+    },
+    {
+      "kind": "case_selection",
+      "ms": 49.73250000000007
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 21.45850000000064
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 18.28179999999975
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 19.62830000000031
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 20.840700000000652
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 17.86200000000008
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 18.64800000000014
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 17.097099999999955
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 19.380199999999604
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 22.233299999999872
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 18.16859999999997
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 16.464100000000144
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 20.058799999999792
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 15.900500000000648
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 18.135199999999713
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 16.615099999999984
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 16.207500000000437
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 14.383699999999408
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 15.364300000000185
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 12.415299999999661
+    },
+    {
+      "kind": "fact_filter",
+      "ms": 15.73490000000038
+    },
+    {
+      "kind": "export_JSON",
+      "ms": 343.85229999999956
+    },
+    {
+      "kind": "export_HTML",
+      "ms": 184.8098
+    }
+  ],
+  "summary": {
+    "case_selection": {
+      "samples": 20,
+      "p50_ms": 49.767800000000534,
+      "empirical_p95_ms": 53.64180000000033
+    },
+    "fact_filter": {
+      "samples": 20,
+      "p50_ms": 17.86200000000008,
+      "empirical_p95_ms": 21.45850000000064
+    }
+  },
+  "automated_first_visit_proxy_ms": 540.4628000000002,
+  "violations": [],
+  "limits": [
+    "Fresh browser contexts, but server/OS caches are warm; not Internet cold-edge performance.",
+    "Automation end-to-end times include Playwright scheduling and assertions, not isolated React render time.",
+    "Only 5 loads/20 interaction samples; no p99, production SLA or human comprehension claim.",
+    "No independent human usability study; proxy follows predetermined tasks."
+  ]
+}

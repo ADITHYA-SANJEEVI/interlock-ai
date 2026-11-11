@@ -1,0 +1,50 @@
+{
+  "classification": "ACTUAL_PUBLIC_APPLICATION_SCREENSHOTS",
+  "checked_at": "2026-11-11T16:54:33.614Z",
+  "viewport": "1440x900",
+  "studio_runtime_or_key_loaded": false,
+  "model_or_provider_calls": 0,
+  "requests_outside_static_get_head": [],
+  "frames": [
+    {
+      "file": "01-product.png",
+      "caption": "Original interactive product introduction; illustrative control flow, not a financial event.",
+      "sha256": "922d6c850c931cabf45faf1c605ced0038fbeb2873d2f274fc7360a8a2ad1aa2"
+    },
+    {
+      "file": "04-completed-four-realities.png",
+      "caption": "Genuine recorded completed USD 1.00 case with four separate source states and unresolved exposure visible.",
+      "sha256": "0a85250fd84e2c17e9321a2a343a391e667b5fb4b82a8dcd0f782783e714c53b"
+    },
+    {
+      "file": "03-recorded-authority.png",
+      "caption": "Historical exact-action authority and original signed-term references; current authority is expired.",
+      "sha256": "da76d68fbb260c7f5310882db621b15fece61871f99f5f8d027f8c24bbc63aba"
+    },
+    {
+      "file": "05-booked-source.png",
+      "caption": "Actual authenticated facts and linked journals; separate economic effects are not additional purchases.",
+      "sha256": "0fe19f0e5aadb0faf1e1b02cbb2f6066e6d6d6e25fbee48b7fc3a476b7eec214"
+    },
+    {
+      "file": "06-guided-investigation.png",
+      "caption": "Genuine incomplete case: historical buyer consent, capture unverified and a retained obligation.",
+      "sha256": "39fbec98cbfe05c262ae29eeff65dcb146573242b0c4fd139a738b5a5b289c2c"
+    },
+    {
+      "file": "07-recorded-investigator.png",
+      "caption": "Previously executed genuine seven-tool investigation; no fresh model or financial request.",
+      "sha256": "e6dafb4bd6fe9da646804eadc1163d3634cb09d9a818274ec49b923cc3fb224f"
+    },
+    {
+      "file": "02-recorded-planner.png",
+      "caption": "Recorded genuine planner tool choices and authority blocking. This later run did not create either historical payment.",
+      "sha256": "5040138532787713393f83a62e3522ca823227eee97d0dc119b1cde3852fb5b3"
+    },
+    {
+      "file": "08-case-comparison.png",
+      "caption": "Separate historical outcomes, source observation times and retained exposure; no synthetic transaction volume.",
+      "sha256": "ad9b3aca9bf0604f871aa205ffb3b5697e86001e1c4607e46d2d01c9469463b8"
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "contract_version": "purchase-planning-v1",
+  "classification": "CURRENT_PLANNING_OVER_AUTHENTICATED_HISTORICAL_TERMS",
+  "tenant_id": "interlock_m2_demo",
+  "principal": "m2_requester",
+  "run_id": "dae23839-6824-43f3-8082-525dee49327f",
+  "objective": "Obtain one eligible workspace seat for alice. Inspect commercial terms, current budget and independent approval requirements.",
+  "summary": "Plan for 1 workspace-seat for alice, USD 100.00 minor units (limit 100), USD only. Scope check confirms workspace-seat is in the controlled product scope and alice is an observed beneficiary; no live availability established. Commercial terms: authenticated historical seller quote from workspace-seller-v1 (merchant JB7TR6VHB4GTQ) at amount_minor 100 USD, expiring 2026-11-10T09:27 (historical, not a live quote; a fresh signed quote is required). Budget/authority: purchase policy pv_6ec77155 is current, unpaused, max_amount 100 with approval_above 0 \u2014 so independent human approval is required, and the policy amount is otherwise within limits. However all four alice grants are unusable (two EXPIRED, one REVOKED, and two EXPIRED with 100 reserved / 0 free lifetime capacity), so no usable requester grant exists. The non-mutating preview is BLOCKED with blockers NO_USABLE_REQUESTER_GRANT and GRANT_EXPIRED_OR_REVOKED; free budget is null. This preview is not an approval, admission, or payment authorization. Next action is issuer review: the requester needs a current, unexpired and unreserved grant, plus a fresh signed seller quote, exact policy decision, independent human exact-action approval, atomic protected admission, PayPal buyer consent and separate capture authorization. No beneficiary, price, grant or limit was substituted.",
+  "proposal": {
+    "product_id": "workspace-seat",
+    "beneficiary": "alice",
+    "quantity": 1,
+    "seller": "workspace-seller-v1",
+    "merchant_id": "JB7TR6VHB4GTQ",
+    "amount_minor": 100,
+    "currency": "USD",
+    "source_quote_id": "usdquote_9b9bef54adea1ada2a1917e2dac8f4dcef248aa885ddf4cfc5a60e095f8c52d1",
+    "source_integrity_hash": "c33948ea4108ff597dda81c473430506eb42653074f1745a2ac12fde4a63729e",
+    "source_expires_at": "2026-11-10T09:27:12.357201+05:30",
+    "classification": "AUTHENTICATED_HISTORICAL_SELLER_TERMS",
+    "live_availability_established": false,
+    "fresh_signed_quote_required": true,
+    "spending_limit_minor": 100
+  },
+  "policy_preview": {
+    "classification": "NON_MUTATING_PREPARATION_PREVIEW",
+    "evaluated_at": "2026-11-11T03:17:49.160318+00:00",
+    "rules_version": "authority-v1-preparation-mirror-1",
+    "authoritative_policy_decision": false,
+    "policy_amount_permitted": true,
+    "policy_version_id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e",
+    "independent_human_approval_required": true,
+    "status": "BLOCKED",
+    "blockers": [
+      "NO_USABLE_REQUESTER_GRANT",
+      "GRANT_EXPIRED_OR_REVOKED"
+    ],
+    "grant_id": null,
+    "free_budget_minor": null,
+    "fresh_signed_quote_required": true,
+    "payment_authorized": false,
+    "next_action": "ISSUER_REVIEW_REQUIRED",
+    "requirements": [
+      "Current requester grant and policy",
+      "Fresh signed seller quote and exact SQL policy decision",
+      "Independent human exact-action approval",
+      "Atomic protected admission",
+      "PayPal buyer consent",
+      "Separate issuer capture authorization"
+    ]
+  },
+  "authority": {
+    "principal": "m2_requester",
+    "tenant_id": "interlock_m2_demo",
+    "configuration": [
+      {
+        "kind": "PURCHASE",
+        "epoch": 2,
+        "paused": false,
+        "policy_version_id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e"
+      }
+    ],
+    "policies": [
+      {
+        "id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e",
+        "kind": "PURCHASE",
+        "current": true,
+        "version": 1,
+        "approval_above": 0,
+        "max_amount": 100,
+        "evaluator_version": "authority-v1",
+        "published_at": "2026-11-09T18:14:41.007289+05:30"
+      }
+    ],
+    "grants": [
+      {
+        "id": "grant_4b98be2e-661a-45bb-be48-10c04607b1b1",
+        "effective_status": "EXPIRED",
+        "lifetime_bound": 100,
+        "head": {
+          "revision": 3,
+          "status": "ACTIVE",
+          "consumed": 0,
+          "reserved": 0,
+          "free": 100
+        },
+        "version": {
+          "beneficiaries": [
+            "alice"
+          ],
+          "expires_at": "2026-11-09T22:01:05.628237+05:30",
+          "seller": "workspace-seller-v1",
+          "integration": "interlock_m2_paypal_us"
+        }
+      },
+      {
+        "id": "grant_ffef8d7b-fe85-4337-8686-fbf277b0eb05",
+        "effective_status": "REVOKED",
+        "lifetime_bound": 100,
+        "head": {
+          "revision": 3,
+          "status": "REVOKED",
+          "consumed": 0,
+          "reserved": 0,
+          "free": 100
+        },
+        "version": {
+          "beneficiaries": [
+            "alice"
+          ],
+          "expires_at": "2026-11-10T03:59:50.931436+05:30",
+          "seller": "workspace-seller-v1",
+          "integration": "interlock_m2_paypal_us"
+        }
+      },
+      {
+        "id": "grant_1b6798be-6f4b-4929-9292-49b7bccfbbe1",
+        "effective_status": "EXPIRED",
+        "lifetime_bound": 100,
+        "head": {
+          "revision": 2,
+          "status": "ACTIVE",
+          "consumed": 0,
+          "reserved": 100,
+          "free": 0
+        },
+        "version": {
+          "beneficiaries": [
+            "alice"
+          ],
+          "expires_at": "2026-11-10T06:03:31.760552+05:30",
+          "seller": "workspace-seller-v1",
+          "integration": "interlock_m2_paypal_us"
+        }
+      },
+      {
+        "id": "grant_8ae2ca65-1b85-4ec9-8700-edd04c919d4b",
+        "effective_status": "EXPIRED",
+        "lifetime_bound": 100,
+        "head": {
+          "revision": 2,
+          "status": "ACTIVE",
+          "consumed": 0,
+          "reserved": 100,
+          "free": 0
+        },
+        "version": {
+          "beneficiaries": [
+            "alice"
+          ],
+          "expires_at": "2026-11-10T09:51:12.227547+05:30",
+          "seller": "workspace-seller-v1",
+          "integration": "interlock_m2_paypal_us"
+        }
+      }
+    ],
+    "independent_human_approval_required": true,
+    "budget_reservation_performed": false,
+    "financial_authority": false
+  },
+  "handoff": {
+    "intent": "Purchase one workspace-seat for alice, with a maximum of USD 1.00. Reviewed historical seller price: USD 1.00 from workspace-seller-v1, merchant JB7TR6VHB4GTQ. These recorded terms are not authority; fresh signed seller terms and human financial gates remain required.",
+    "grant_id": null,
+    "proposal": {
+      "product_id": "workspace-seat",
+      "beneficiary": "alice",
+      "quantity": 1,
+      "seller": "workspace-seller-v1",
+      "merchant_id": "JB7TR6VHB4GTQ",
+      "amount_minor": 100,
+      "currency": "USD",
+      "source_quote_id": "usdquote_9b9bef54adea1ada2a1917e2dac8f4dcef248aa885ddf4cfc5a60e095f8c52d1",
+      "source_integrity_hash": "c33948ea4108ff597dda81c473430506eb42653074f1745a2ac12fde4a63729e",
+      "source_expires_at": "2026-11-10T09:27:12.357201+05:30",
+      "classification": "AUTHENTICATED_HISTORICAL_SELLER_TERMS",
+      "live_availability_established": false,
+      "fresh_signed_quote_required": true,
+      "spending_limit_minor": 100
+    },
+    "financial_authority": false
+  },
+  "handoff_digest": "19417b2269b63b2163c11f5f2404d74b9e57d0de3ecd01c03b2a246b90203d8a",
+  "trace": [
+    {
+      "tool": "inspect_products",
+      "call_id": "call_cefb635236b34194be36ec36",
+      "source_id": "planning_source_1",
+      "arguments": {},
+      "status": "OK",
+      "latency_ms": 0,
+      "response": {
+        "products": [
+          {
+            "product_id": "workspace-seat",
+            "quantity": 1,
+            "currency": "USD"
+          }
+        ],
+        "observed_beneficiaries": [
+          "alice"
+        ],
+        "source": "Authenticated stored seller quotes; controlled product contract",
+        "live_registration_or_availability_established": false
+      },
+      "source_sha256": "915779595ab3446870b7523c6f0f881163f3a8487905f57cf6cf9147403a40dc"
+    },
+    {
+      "tool": "inspect_commercial_terms",
+      "call_id": "call_ecf6a65826f846daaa3b082e",
+      "source_id": "planning_source_2",
+      "arguments": {
+        "product_id": "workspace-seat",
+        "beneficiary": "alice",
+        "quantity": 1,
+        "currency": "USD"
+      },
+      "status": "OK",
+      "latency_ms": 16,
+      "response": {
+        "product_id": "workspace-seat",
+        "beneficiary": "alice",
+        "quantity": 1,
+        "seller": "workspace-seller-v1",
+        "merchant_id": "JB7TR6VHB4GTQ",
+        "amount_minor": 100,
+        "currency": "USD",
+        "source_quote_id": "usdquote_9b9bef54adea1ada2a1917e2dac8f4dcef248aa885ddf4cfc5a60e095f8c52d1",
+        "source_integrity_hash": "c33948ea4108ff597dda81c473430506eb42653074f1745a2ac12fde4a63729e",
+        "source_expires_at": "2026-11-10T09:27:12.357201+05:30",
+        "classification": "AUTHENTICATED_HISTORICAL_SELLER_TERMS",
+        "live_availability_established": false,
+        "fresh_signed_quote_required": true
+      },
+      "source_sha256": "19ab8917544abce6cc114c289ed24d26e964dfbb9d620ececea227949d755a18"
+    },
+    {
+      "tool": "inspect_spending_authority",
+      "call_id": "call_16213f46e8ce4f5ca03554e1",
+      "source_id": "planning_source_3",
+      "arguments": {},
+      "status": "OK",
+      "latency_ms": 0,
+      "response": {
+        "principal": "m2_requester",
+        "tenant_id": "interlock_m2_demo",
+        "configuration": [
+          {
+            "kind": "PURCHASE",
+            "epoch": 2,
+            "paused": false,
+            "policy_version_id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e"
+          }
+        ],
+        "policies": [
+          {
+            "id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e",
+            "kind": "PURCHASE",
+            "current": true,
+            "version": 1,
+            "approval_above": 0,
+            "max_amount": 100,
+            "evaluator_version": "authority-v1",
+            "published_at": "2026-11-09T18:14:41.007289+05:30"
+          }
+        ],
+        "grants": [
+          {
+            "id": "grant_4b98be2e-661a-45bb-be48-10c04607b1b1",
+            "effective_status": "EXPIRED",
+            "lifetime_bound": 100,
+            "head": {
+              "revision": 3,
+              "status": "ACTIVE",
+              "consumed": 0,
+              "reserved": 0,
+              "free": 100
+            },
+            "version": {
+              "beneficiaries": [
+                "alice"
+              ],
+              "expires_at": "2026-11-09T22:01:05.628237+05:30",
+              "seller": "workspace-seller-v1",
+              "integration": "interlock_m2_paypal_us"
+            }
+          },
+          {
+            "id": "grant_ffef8d7b-fe85-4337-8686-fbf277b0eb05",
+            "effective_status": "REVOKED",
+            "lifetime_bound": 100,
+            "head": {
+              "revision": 3,
+              "status": "REVOKED",
+              "consumed": 0,
+              "reserved": 0,
+              "free": 100
+            },
+            "version": {
+              "beneficiaries": [
+                "alice"
+              ],
+              "expires_at": "2026-11-10T03:59:50.931436+05:30",
+              "seller": "workspace-seller-v1",
+              "integration": "interlock_m2_paypal_us"
+            }
+          },
+          {
+            "id": "grant_1b6798be-6f4b-4929-9292-49b7bccfbbe1",
+            "effective_status": "EXPIRED",
+            "lifetime_bound": 100,
+            "head": {
+              "revision": 2,
+              "status": "ACTIVE",
+              "consumed": 0,
+              "reserved": 100,
+              "free": 0
+            },
+            "version": {
+              "beneficiaries": [
+                "alice"
+              ],
+              "expires_at": "2026-11-10T06:03:31.760552+05:30",
+              "seller": "workspace-seller-v1",
+              "integration": "interlock_m2_paypal_us"
+            }
+          },
+          {
+            "id": "grant_8ae2ca65-1b85-4ec9-8700-edd04c919d4b",
+            "effective_status": "EXPIRED",
+            "lifetime_bound": 100,
+            "head": {
+              "revision": 2,
+              "status": "ACTIVE",
+              "consumed": 0,
+              "reserved": 100,
+              "free": 0
+            },
+            "version": {
+              "beneficiaries": [
+                "alice"
+              ],
+              "expires_at": "2026-11-10T09:51:12.227547+05:30",
+              "seller": "workspace-seller-v1",
+              "integration": "interlock_m2_paypal_us"
+            }
+          }
+        ],
+        "independent_human_approval_required": true,
+        "budget_reservation_performed": false,
+        "financial_authority": false
+      },
+      "source_sha256": "c87afa8250275fa19a4ef470199721b02da33e4d242a57ade9d7fe4ca7b48f99"
+    },
+    {
+      "tool": "preview_purchase",
+      "call_id": "call_1b57b7501f704d608f0ab8ec",
+      "source_id": "planning_source_4",
+      "arguments": {
+        "product_id": "workspace-seat",
+        "beneficiary": "alice",
+        "quantity": 1,
+        "currency": "USD",
+        "spending_limit_minor": 100,
+        "source_quote_id": "usdquote_9b9bef54adea1ada2a1917e2dac8f4dcef248aa885ddf4cfc5a60e095f8c52d1"
+      },
+      "status": "OK",
+      "latency_ms": 0,
+      "response": {
+        "classification": "NON_MUTATING_PREPARATION_PREVIEW",
+        "evaluated_at": "2026-11-11T03:17:49.160318+00:00",
+        "rules_version": "authority-v1-preparation-mirror-1",
+        "authoritative_policy_decision": false,
+        "policy_amount_permitted": true,
+        "policy_version_id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e",
+        "independent_human_approval_required": true,
+        "status": "BLOCKED",
+        "blockers": [
+          "NO_USABLE_REQUESTER_GRANT",
+          "GRANT_EXPIRED_OR_REVOKED"
+        ],
+        "grant_id": null,
+        "free_budget_minor": null,
+        "fresh_signed_quote_required": true,
+        "payment_authorized": false,
+        "next_action": "ISSUER_REVIEW_REQUIRED",
+        "requirements": [
+          "Current requester grant and policy",
+          "Fresh signed seller quote and exact SQL policy decision",
+          "Independent human exact-action approval",
+          "Atomic protected admission",
+          "PayPal buyer consent",
+          "Separate issuer capture authorization"
+        ]
+      },
+      "source_sha256": "07229f588fe470cf5b03e8c3b7286b73431e8794deb082784e752c6a8ef209f7"
+    }
+  ],
+  "model_turns": [
+    {
+      "http_status": 200,
+      "latency_ms": 3031,
+      "response_sha256": "f6c997aee3e0ca74504296cee37ef674d75d47372ef2902fc4770b4b72f8cea7"
+    },
+    {
+      "http_status": 200,
+      "latency_ms": 4453,
+      "response_sha256": "307a119e77d28811aac78977868e1d92722db16004434508511614cbb0d20f78"
+    },
+    {
+      "http_status": 200,
+      "latency_ms": 4594,
+      "response_sha256": "bb45f668ecfc7eeb6395b6316afd24945e3b7af5278590bf5713e2367290c884"
+    }
+  ],
+  "final_schema_repair_requested": false,
+  "source_ids": [
+    "planning_source_1",
+    "planning_source_2",
+    "planning_source_3",
+    "planning_source_4"
+  ],
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "actual_model_invocation": true,
+  "tool_execution_count": 4,
+  "latency_ms": 12141,
+  "read_at": "2026-11-11T03:17:53.791936+00:00",
+  "financial_authority": false,
+  "database_writes": false,
+  "provider_contacted": false,
+  "persisted_financial_proposal": false
+}

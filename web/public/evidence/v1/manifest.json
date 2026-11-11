@@ -1,0 +1,12 @@
+{
+  "contract_version": "interlock-public-manifest-v1",
+  "evidence_version": "2026-11-11.v1",
+  "classification": "HISTORICAL_SANDBOX_EVIDENCE",
+  "files": [
+    {
+      "path": "bundle.json",
+      "bytes": 39667,
+      "sha256": "c35478e11c8821d91bc5a4c3133186668a90ebb50cf6d5c23b38ea91a9a3f025"
+    }
+  ]
+}

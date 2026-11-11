@@ -1,0 +1,225 @@
+{
+  "classification": "LOCKED_INSTALLED_PYTHON_LICENSE_METADATA_INVENTORY",
+  "checked_at": "2026-11-11T06:36:20.022459+00:00",
+  "requirements_lock_sha256": "f9b33a7b275ffa63332e3f539d89617ed4ca0ac2a6c4217f54ad0191ff637b7e",
+  "python_runtime_shipped_in_static_demo": false,
+  "not_a_complete_legal_distribution_opinion": true,
+  "packages": [
+    {
+      "name": "alembic",
+      "locked_version": "1.18.4",
+      "installed_version": "1.18.4",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "annotated-doc",
+      "locked_version": "0.0.5",
+      "installed_version": "0.0.5",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "annotated-types",
+      "locked_version": "0.8.0",
+      "installed_version": "0.8.0",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "anyio",
+      "locked_version": "4.15.1",
+      "installed_version": "4.15.1",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "certifi",
+      "locked_version": "2026.7.22",
+      "installed_version": "2026.7.22",
+      "declared_license": "MPL-2.0"
+    },
+    {
+      "name": "click",
+      "locked_version": "8.5.0",
+      "installed_version": "8.5.0",
+      "declared_license": "BSD-3-Clause"
+    },
+    {
+      "name": "colorama",
+      "locked_version": "0.4.6",
+      "installed_version": "0.4.6",
+      "declared_license": "UNDECLARED"
+    },
+    {
+      "name": "fastapi",
+      "locked_version": "0.135.1",
+      "installed_version": "0.135.1",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "greenlet",
+      "locked_version": "3.5.6",
+      "installed_version": "3.5.6",
+      "declared_license": "MIT AND PSF-2.0"
+    },
+    {
+      "name": "h11",
+      "locked_version": "0.16.0",
+      "installed_version": "0.16.0",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "httpcore",
+      "locked_version": "1.0.9",
+      "installed_version": "1.0.9",
+      "declared_license": "BSD-3-Clause"
+    },
+    {
+      "name": "httpx",
+      "locked_version": "0.28.1",
+      "installed_version": "0.28.1",
+      "declared_license": "BSD-3-Clause"
+    },
+    {
+      "name": "idna",
+      "locked_version": "3.20",
+      "installed_version": "3.20",
+      "declared_license": "BSD-3-Clause"
+    },
+    {
+      "name": "iniconfig",
+      "locked_version": "2.3.0",
+      "installed_version": "2.3.0",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "librt",
+      "locked_version": "0.16.0",
+      "installed_version": "0.16.0",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "Mako",
+      "locked_version": "1.4.3",
+      "installed_version": "1.4.3",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "MarkupSafe",
+      "locked_version": "3.0.4",
+      "installed_version": "3.0.4",
+      "declared_license": "BSD-3-Clause"
+    },
+    {
+      "name": "mypy",
+      "locked_version": "1.19.1",
+      "installed_version": "1.19.1",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "mypy_extensions",
+      "locked_version": "1.1.0",
+      "installed_version": "1.1.0",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "packaging",
+      "locked_version": "26.3",
+      "installed_version": "26.3",
+      "declared_license": "Apache-2.0 OR BSD-2-Clause"
+    },
+    {
+      "name": "pathspec",
+      "locked_version": "1.1.1",
+      "installed_version": "1.1.1",
+      "declared_license": "UNDECLARED"
+    },
+    {
+      "name": "pluggy",
+      "locked_version": "1.6.0",
+      "installed_version": "1.6.0",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "psycopg",
+      "locked_version": "3.3.3",
+      "installed_version": "3.3.3",
+      "declared_license": "LGPL-3.0-only"
+    },
+    {
+      "name": "psycopg-binary",
+      "locked_version": "3.3.3",
+      "installed_version": "3.3.3",
+      "declared_license": "LGPL-3.0-only"
+    },
+    {
+      "name": "pydantic",
+      "locked_version": "2.12.5",
+      "installed_version": "2.12.5",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "pydantic_core",
+      "locked_version": "2.41.5",
+      "installed_version": "2.41.5",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "Pygments",
+      "locked_version": "2.21.0",
+      "installed_version": "2.21.0",
+      "declared_license": "BSD-2-Clause"
+    },
+    {
+      "name": "pytest",
+      "locked_version": "9.0.2",
+      "installed_version": "9.0.2",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "python-dotenv",
+      "locked_version": "1.2.2",
+      "installed_version": "1.2.2",
+      "declared_license": "BSD-3-Clause"
+    },
+    {
+      "name": "ruff",
+      "locked_version": "0.15.6",
+      "installed_version": "0.15.6",
+      "declared_license": "UNDECLARED"
+    },
+    {
+      "name": "SQLAlchemy",
+      "locked_version": "2.0.48",
+      "installed_version": "2.0.48",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "starlette",
+      "locked_version": "1.7.0",
+      "installed_version": "1.7.0",
+      "declared_license": "BSD-3-Clause"
+    },
+    {
+      "name": "typing-inspection",
+      "locked_version": "0.4.4",
+      "installed_version": "0.4.4",
+      "declared_license": "MIT"
+    },
+    {
+      "name": "typing_extensions",
+      "locked_version": "4.16.0",
+      "installed_version": "4.16.0",
+      "declared_license": "PSF-2.0"
+    },
+    {
+      "name": "tzdata",
+      "locked_version": "2026.5",
+      "installed_version": "2026.5",
+      "declared_license": "Apache-2.0"
+    },
+    {
+      "name": "uvicorn",
+      "locked_version": "0.41.0",
+      "installed_version": "0.41.0",
+      "declared_license": "BSD-3-Clause"
+    }
+  ]
+}

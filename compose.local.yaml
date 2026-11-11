@@ -1,0 +1,17 @@
+# Pass 7 reference-only development database. Runtime services use generated profiles.
+name: interlock-pass7-local
+services:
+  postgres:
+    image: postgres:18.3
+    environment:
+      POSTGRES_USER: interlock
+      POSTGRES_PASSWORD: local_only
+    ports: ["127.0.0.1:${INTERLOCK_LOCAL_PG_PORT:-55433}:5432"]
+    volumes:
+      - release_postgres:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U interlock"]
+      interval: 3s
+      retries: 20
+volumes:
+  release_postgres:

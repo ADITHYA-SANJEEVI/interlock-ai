@@ -1,0 +1,29 @@
+# PROPOSAL ONLY. Creating this resource or publishing requires owner approval.
+# No databases, secrets, model endpoints, PayPal services or paid workers.
+services:
+  - type: web
+    name: interlock-ai-historical-demo
+    runtime: static
+    branch: main
+    autoDeployTrigger: "off"
+    buildCommand: cd web && npm ci && npm run demo:build
+    staticPublishPath: ./dist/judge
+    envVars:
+      - key: NODE_VERSION
+        value: 22.19.0
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: no-referrer
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+      - path: /evidence/*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+# No catch-all SPA rewrite: private/API paths must remain 404.

@@ -1,0 +1,19 @@
+title = "Interlock reviewed non-credential fields"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Request deduplication identities and content hashes are not authentication credentials"
+regexTarget = "line"
+regexes = [
+  '''(?i)["'](?:operation_key|idempotency_key|openapi_sha256|stable_key_sha256|idempotency_key_sha256)["']\s*:\s*["'][a-z0-9_:-]+["']''',
+  '''"(?:backend/interlock/api\.py|api-contracts\.json|check-api-freeze\.txt)"\s*:\s*"[a-f0-9]{64}"''',
+  '''https://www\.sandbox\.paypal\.com/checkoutnow\?token=SYNTHETICORDER01'''
+]
+
+[[allowlists]]
+description = "Synthetic connected-adapter probe identity, not a provider key"
+condition = "AND"
+paths = ['''^tests/test_connected\.py$''']
+regexTarget = "line"
+regexes = ['''"probe_key"''']

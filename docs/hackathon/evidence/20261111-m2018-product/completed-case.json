@@ -1,0 +1,343 @@
+{
+  "contract_version": "operation-case-v1",
+  "classification": "AUTHENTICATED_RECORDED_SANDBOX_CASE",
+  "operation_id": "op_3c78b42e074541dfac3a3ed8456fb59b",
+  "tenant_id": "interlock_m2_demo",
+  "read_at": "2026-11-11T03:12:33.797123+00:00",
+  "status": "RECORDED_COMPLETED_RECONCILED",
+  "next_action": "REVIEW_RETAINED_DISPATCH_EXPOSURE_NO_FINANCIAL_MUTATION",
+  "operational_cautions": [
+    "Stored dispatch exposure remains EXPOSED_UNRESOLVED. Capture, accounting and fulfillment evidence do not close this separate record."
+  ],
+  "financial_authority": false,
+  "database_writes": false,
+  "provider_contacted": false,
+  "current_provider_state_established": false,
+  "cancellation": null,
+  "commercial": {
+    "seller": "workspace-seller-v1",
+    "merchant_id": "JB7TR6VHB4GTQ",
+    "amount_minor": 100,
+    "currency": "USD",
+    "quantity": 1,
+    "lines": [
+      {
+        "product_id": "workspace-seat",
+        "beneficiary": "alice",
+        "unit_price_minor": 100
+      }
+    ],
+    "quote_id": "usdquote_9b9bef54adea1ada2a1917e2dac8f4dcef248aa885ddf4cfc5a60e095f8c52d1",
+    "quote_expires_at": "2026-11-10T09:27:12.357201+05:30",
+    "quote_expired": true,
+    "quote_integrity_hash": "c33948ea4108ff597dda81c473430506eb42653074f1745a2ac12fde4a63729e"
+  },
+  "authority": {
+    "action_id": "action_8ed08169-7448-4bd8-b56e-5850e5f11f21",
+    "action_revision": 2,
+    "action_state": "ADMITTED",
+    "current_original_authority": false,
+    "evidence_id": "evidence_10fa520f-b124-4311-9fe6-8d50be3f4ff3",
+    "decision_id": "decision_3bde0f41-44fa-4a60-a157-de9d18c9a513",
+    "policy_version_id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e",
+    "policy_allowed_when_evaluated": true,
+    "approval_id": "approval_38846da8-68b1-4c1e-b1ef-2ebb1dae9057",
+    "approval_details": {
+      "visible": false,
+      "status": "PERMISSION_LIMITED",
+      "approver": null,
+      "expires_at": null
+    },
+    "grant_id": "grant_8ae2ca65-1b85-4ec9-8700-edd04c919d4b",
+    "grant_effective_status": "EXPIRED",
+    "grant_expires_at": "2026-11-10T09:51:12.227547+05:30",
+    "lifetime_budget": {
+      "bound": 100,
+      "consumed": 0,
+      "reserved": 100,
+      "free": 0
+    },
+    "reservation": {
+      "id": "reservation_2935ea91-d572-4657-a1c2-77014316cd69",
+      "amount_minor": 100,
+      "currency": "USD",
+      "status": "RESERVED",
+      "dispatch_exposure_state": "EXPOSED_UNRESOLVED",
+      "source_terms_digest": "30dd8134ca448e6ad742d377e993e97d6f2b2038c3d9199e6fbd081926c8a64d"
+    }
+  },
+  "provider": {
+    "provider_order_id": "4FM556283T043144X",
+    "provider_order_status": "COMPLETED",
+    "capture_id": "6C4956371B715513Y",
+    "capture_confirmed": true,
+    "last_canonical_read_at": "2026-11-10T09:19:27.456135+05:30",
+    "receipt_id": "b6424c3c-7c4d-46c7-8068-011a8e523ae5",
+    "create_committed": true,
+    "capture_committed": true
+  },
+  "economic": {
+    "facts": [
+      {
+        "id": "ea829506-faf5-4677-9278-de58d98fbe11",
+        "kind": "CAPTURE",
+        "effect_id": "6C4956371B715513Y",
+        "amount_minor": 100,
+        "currency": "USD"
+      },
+      {
+        "id": "c87905d5-3bdd-46bc-9c73-dfc8f0b7b4a4",
+        "kind": "ORDER_LIABILITY",
+        "effect_id": "6C4956371B715513Y",
+        "amount_minor": 100,
+        "currency": "USD"
+      },
+      {
+        "id": "df42448d-c28a-422f-9676-1654dbdfe12f",
+        "kind": "SELLER_FULFILLED",
+        "effect_id": "6C4956371B715513Y",
+        "amount_minor": 100,
+        "currency": "USD"
+      },
+      {
+        "id": "4cd6c57b-8e2f-4b4a-beed-f92bbb93febb",
+        "kind": "REVENUE",
+        "effect_id": "6C4956371B715513Y",
+        "amount_minor": 100,
+        "currency": "USD"
+      }
+    ],
+    "journals": [
+      {
+        "id": "1492bed5-9954-4198-96eb-82483d8287ec",
+        "fact_id": "ea829506-faf5-4677-9278-de58d98fbe11",
+        "template": "CAPTURE_TO_SUSPENSE",
+        "amount_minor": 100,
+        "currency": "USD",
+        "lines": [
+          {
+            "account": "ProviderClearing",
+            "side": "DEBIT",
+            "amount_minor": 100,
+            "currency": "USD"
+          },
+          {
+            "account": "UnmatchedProviderSuspense",
+            "side": "CREDIT",
+            "amount_minor": 100,
+            "currency": "USD"
+          }
+        ]
+      },
+      {
+        "id": "18d64933-53d9-4239-b432-2ec7c6ca8192",
+        "fact_id": "c87905d5-3bdd-46bc-9c73-dfc8f0b7b4a4",
+        "template": "MATCH_TO_LIABILITY",
+        "amount_minor": 100,
+        "currency": "USD",
+        "lines": [
+          {
+            "account": "UnmatchedProviderSuspense",
+            "side": "DEBIT",
+            "amount_minor": 100,
+            "currency": "USD"
+          },
+          {
+            "account": "CustomerOrderLiability",
+            "side": "CREDIT",
+            "amount_minor": 100,
+            "currency": "USD"
+          }
+        ]
+      },
+      {
+        "id": "e6f4d5c0-96e6-4909-97d3-4723e11aa726",
+        "fact_id": "4cd6c57b-8e2f-4b4a-beed-f92bbb93febb",
+        "template": "FULFILLMENT_TO_REVENUE",
+        "amount_minor": 100,
+        "currency": "USD",
+        "lines": [
+          {
+            "account": "CustomerOrderLiability",
+            "side": "DEBIT",
+            "amount_minor": 100,
+            "currency": "USD"
+          },
+          {
+            "account": "SalesRevenue",
+            "side": "CREDIT",
+            "amount_minor": 100,
+            "currency": "USD"
+          }
+        ]
+      }
+    ],
+    "journals_balanced": true
+  },
+  "seller": {
+    "fulfillment_recorded": true,
+    "live_seller_contacted": false
+  },
+  "reconciliation": {
+    "available": true,
+    "gaps": [],
+    "runs": [
+      {
+        "id": "0460d686-f6db-41f9-a238-490173ac6bc9",
+        "state": "COMPLETE",
+        "completed_at": "2026-11-10T09:19:34.562766+05:30"
+      }
+    ],
+    "findings": [],
+    "bounded_history": true,
+    "empty_does_not_prove_absence": true
+  },
+  "timeline": [
+    {
+      "kind": "ACTION_RECORDED",
+      "at": "2026-11-10T09:12:14.497782+05:30",
+      "source_id": "action_8ed08169-7448-4bd8-b56e-5850e5f11f21",
+      "source_system": "authority action",
+      "actor": "m2_requester",
+      "actor_evidence": "AUTHENTICATED_SOURCE_FIELD",
+      "note": null
+    },
+    {
+      "kind": "CAPACITY_RESERVED",
+      "at": "2026-11-10T09:14:41.264218+05:30",
+      "source_id": "reservation_2935ea91-d572-4657-a1c2-77014316cd69",
+      "source_system": "atomic admission",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Actor is not exposed by this reservation projection."
+    },
+    {
+      "kind": "OPERATION_ADMITTED",
+      "at": "2026-11-10T09:14:41.292730+05:30",
+      "source_id": "op_3c78b42e074541dfac3a3ed8456fb59b",
+      "source_system": "protected dispatch",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Bound requester: m2_requester; not a claim about the executor."
+    },
+    {
+      "kind": "PROVIDER_OBSERVATION_RECORDED",
+      "at": "2026-11-10T09:19:27.456135+05:30",
+      "source_id": "b6424c3c-7c4d-46c7-8068-011a8e523ae5",
+      "source_system": "authenticated provider observation",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Observation timestamp, not an inferred payment-event timestamp. No new PayPal read."
+    },
+    {
+      "kind": "RECONCILIATION_RUN_RECORDED",
+      "at": "2026-11-10T09:19:34.562766+05:30",
+      "source_id": "0460d686-f6db-41f9-a238-490173ac6bc9",
+      "source_system": "stored reconciliation",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Run completion alone does not resolve open findings."
+    },
+    {
+      "kind": "ECONOMIC_FACT_RECORDED",
+      "at": null,
+      "source_id": "ea829506-faf5-4677-9278-de58d98fbe11",
+      "source_system": "authenticated economic facts",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Creation time is not exposed by this source API."
+    },
+    {
+      "kind": "ECONOMIC_FACT_RECORDED",
+      "at": null,
+      "source_id": "c87905d5-3bdd-46bc-9c73-dfc8f0b7b4a4",
+      "source_system": "authenticated economic facts",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Creation time is not exposed by this source API."
+    },
+    {
+      "kind": "ECONOMIC_FACT_RECORDED",
+      "at": null,
+      "source_id": "df42448d-c28a-422f-9676-1654dbdfe12f",
+      "source_system": "authenticated economic facts",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Creation time is not exposed by this source API."
+    },
+    {
+      "kind": "ECONOMIC_FACT_RECORDED",
+      "at": null,
+      "source_id": "4cd6c57b-8e2f-4b4a-beed-f92bbb93febb",
+      "source_system": "authenticated economic facts",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Creation time is not exposed by this source API."
+    },
+    {
+      "kind": "FULFILLMENT_RECORDED",
+      "at": null,
+      "source_id": "df42448d-c28a-422f-9676-1654dbdfe12f",
+      "source_system": "recorded seller attestation",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Attestation time and individual actor are not exposed."
+    },
+    {
+      "kind": "JOURNAL_RECORDED",
+      "at": null,
+      "source_id": "1492bed5-9954-4198-96eb-82483d8287ec",
+      "source_system": "protected posting records",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Posting time is not exposed by this source API."
+    },
+    {
+      "kind": "JOURNAL_RECORDED",
+      "at": null,
+      "source_id": "18d64933-53d9-4239-b432-2ec7c6ca8192",
+      "source_system": "protected posting records",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Posting time is not exposed by this source API."
+    },
+    {
+      "kind": "JOURNAL_RECORDED",
+      "at": null,
+      "source_id": "e6f4d5c0-96e6-4909-97d3-4723e11aa726",
+      "source_system": "protected posting records",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Posting time is not exposed by this source API."
+    },
+    {
+      "kind": "POLICY_DECISION_RECORDED",
+      "at": null,
+      "source_id": "decision_3bde0f41-44fa-4a60-a157-de9d18c9a513",
+      "source_system": "deterministic policy",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": null
+    }
+  ],
+  "integrity": {
+    "action_digest": "30dd8134ca448e6ad742d377e993e97d6f2b2038c3d9199e6fbd081926c8a64d",
+    "evidence_digest": "c5a5f81a739ec69bf8051f681624b508839c981161775fb10743ba0690255041",
+    "request_digest": "8368f326800a9d918192f33a6d2571b3ddf947b8160f422a663742389a34ca30",
+    "quote_digest": "c33948ea4108ff597dda81c473430506eb42653074f1745a2ac12fde4a63729e",
+    "meaning": "Existing source integrity hashes; not proof of an externally trusted signature."
+  },
+  "unavailable": [
+    "Current PayPal state",
+    "Private buyer/payment identity",
+    "Unexposed fact/posting/fulfillment timestamps",
+    "Provider mutation request identities are not returned by these scoped APIs"
+  ],
+  "redaction": {
+    "mode": "ALLOWLISTED_CASE_FIELDS",
+    "raw_transport_bodies_included": false,
+    "private_buyer_data_included": false,
+    "model_reasoning_included": false
+  },
+  "package_sha256": "c51993c1236395f0a95563c8a2d0eaff4b4c17112486913931edbd80b4af68b0"
+}

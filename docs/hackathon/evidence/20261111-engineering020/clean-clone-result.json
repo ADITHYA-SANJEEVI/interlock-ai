@@ -1,0 +1,23 @@
+{
+  "classification": "ACTUAL_SEPARATE_CLEAN_CHECKOUT_VALIDATION",
+  "product_commit": "f0e78b45ed3800bbbccb34f820b9b1eaaee48813",
+  "test_correction_commit": "632ef791b7ca7ee2069b23439745bb4b7ff19aa4",
+  "public_registry_npm_ci_packages_added": 184,
+  "public_browser_passed": 13,
+  "workspace_design_commerce_initial_passed": 27,
+  "corrected_mobile_design_case_passed": 1,
+  "unique_workspace_design_commerce_passed": 28,
+  "typecheck": "PASS",
+  "eslint": "PASS",
+  "static_build": "PASS",
+  "profiles_or_saved_sessions_copied": false,
+  "generated_post_test_status": " M web/next-env.d.ts\n",
+  "corrections": [
+    "Windows validation harness retained required ComSpec after npm-run ERR_INVALID_ARG_TYPE.",
+    "One mobile design assertion now requires visible selected-case evidence rather than a hidden comparison cell. No application/source data change."
+  ],
+  "limitations": [
+    "28 regressions passed across the initial 27 successes and focused rerun of the corrected failed case; not a single all-green 28-case invocation.",
+    "Windows Node public build; no Linux, CDN, Render or TLS execution."
+  ]
+}

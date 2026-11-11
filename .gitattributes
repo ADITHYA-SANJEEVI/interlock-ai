@@ -1,0 +1,25 @@
+# Public source snapshot: preserve exported bytes across platforms.
+* -text
+# Preserve the authoritative attachment byte-for-byte across Windows checkouts.
+docs/Third_Flagship_Canonical_Build_Spec.md -text
+# Manifest hashes cover original bytes on every checkout platform.
+docs/evidence/pass0/** -text whitespace=cr-at-eol
+docs/evidence/pass1/** -text whitespace=cr-at-eol
+docs/evidence/pass2/** -text whitespace=cr-at-eol
+docs/evidence/pass3/** -text whitespace=cr-at-eol
+docs/evidence/pass3/*.txt whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+docs/evidence/pass4/** -text whitespace=cr-at-eol
+docs/evidence/pass4/*.txt whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+requirements.lock text eol=lf
+# Keep new design evidence and upstream font notices byte-identical for hashes.
+docs/hackathon/evidence/20261110-m2017-design/** -text whitespace=cr-at-eol
+docs/hackathon/evidence/20261111-m2018-product/** -text whitespace=cr-at-eol
+docs/hackathon/evidence/20261111-release019/** -text whitespace=cr-at-eol
+docs/hackathon/evidence/20261111-engineering020/** -text whitespace=cr-at-eol
+docs/hackathon/evidence/20261111-engineering020/*.txt whitespace=-blank-at-eof,cr-at-eol
+# Preserve captured command output, including its terminal blank line.
+docs/hackathon/evidence/20261111-release019/clean-clone-browser-tail.txt whitespace=-blank-at-eof,cr-at-eol
+web/public/evidence/v1/** -text whitespace=cr-at-eol
+third_party/PUBLIC_RUNTIME_NOTICES.txt -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+web/public/notices/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+web/app/product/fonts/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

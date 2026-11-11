@@ -1,0 +1,23 @@
+{
+  "classification": "FINAL_DIRECTIVE_020_ENGINEERING_CHECKS",
+  "public_browser": 13,
+  "workspace_design_planning_unique": 28,
+  "workspace_result_note": "27 initial passes + corrected mobile case focused pass",
+  "official_local_studio": 1,
+  "total_unique_browser_checks": 42,
+  "node_projection_and_question_tests": 33,
+  "python_offline_tests": 82,
+  "typescript": "PASS",
+  "eslint": "PASS",
+  "targeted_ruff": "PASS",
+  "static_and_private_production_builds": "PASS",
+  "financial_tables_unchanged": 135,
+  "workspace_guards_unchanged": 47,
+  "financial_sql_and_707_suite_rerun": false,
+  "provider_and_fresh_model_calls": 0,
+  "public_deployment_or_push": false,
+  "human_usability_study": false,
+  "production_npm_advisories": 0,
+  "product_commit": "f0e78b45ed3800bbbccb34f820b9b1eaaee48813",
+  "test_correction_commit": "632ef791b7ca7ee2069b23439745bb4b7ff19aa4"
+}

@@ -1,0 +1,13 @@
+{
+  "classification": "ACTUAL_READ_ONLY_FINANCIAL_PRESERVATION",
+  "checked_at": "2026-11-11T14:41:57.854844+00:00",
+  "system_identifier": "7706108909131505256",
+  "port": 55438,
+  "tables_compared": 135,
+  "unchanged": true,
+  "migrations": 0,
+  "financial_mutations": 0,
+  "paypal_calls": 0,
+  "fresh_model_calls": 0,
+  "desktop_control": false
+}

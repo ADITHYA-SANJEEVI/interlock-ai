@@ -1,0 +1,375 @@
+{
+  "classification": "BOUNDED_GENUINE_LOCAL_READ_BENCHMARK",
+  "checked_at": "2026-11-11T14:19:27.575725+00:00",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.12.10",
+  "endpoint": "http://127.0.0.1:18105/v1/commerce/cases/op_3c78b42e074541dfac3a3ed8456fb59b",
+  "method": "GET",
+  "total_case_requests_including_warmup": 45,
+  "warmup": {
+    "index": 0,
+    "status": 200,
+    "latency_ms": 519.561,
+    "response_bytes": 8693,
+    "identity_valid": true
+  },
+  "groups": [
+    {
+      "requests": 12,
+      "concurrency": 1,
+      "wall_seconds": 1.6851,
+      "statuses": {
+        "200": 12
+      },
+      "successful_requests_per_second": 7.121,
+      "successful_p50_ms": 121.467,
+      "successful_empirical_p95_ms": 361.718,
+      "samples": [
+        {
+          "index": 1,
+          "status": 200,
+          "latency_ms": 124.438,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 2,
+          "status": 200,
+          "latency_ms": 124.721,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 3,
+          "status": 200,
+          "latency_ms": 128.825,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 4,
+          "status": 200,
+          "latency_ms": 125.397,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 5,
+          "status": 200,
+          "latency_ms": 117.539,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 6,
+          "status": 200,
+          "latency_ms": 116.415,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 7,
+          "status": 200,
+          "latency_ms": 122.936,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 8,
+          "status": 200,
+          "latency_ms": 121.467,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 9,
+          "status": 200,
+          "latency_ms": 113.611,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 10,
+          "status": 200,
+          "latency_ms": 361.718,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 11,
+          "status": 200,
+          "latency_ms": 112.153,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 12,
+          "status": 200,
+          "latency_ms": 113.671,
+          "response_bytes": 8693,
+          "identity_valid": true
+        }
+      ]
+    },
+    {
+      "requests": 16,
+      "concurrency": 4,
+      "wall_seconds": 0.976,
+      "statuses": {
+        "200": 16
+      },
+      "successful_requests_per_second": 16.393,
+      "successful_p50_ms": 231.302,
+      "successful_empirical_p95_ms": 273.719,
+      "samples": [
+        {
+          "index": 13,
+          "status": 200,
+          "latency_ms": 239.883,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 14,
+          "status": 200,
+          "latency_ms": 268.416,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 15,
+          "status": 200,
+          "latency_ms": 256.667,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 16,
+          "status": 200,
+          "latency_ms": 273.481,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 17,
+          "status": 200,
+          "latency_ms": 228.86,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 18,
+          "status": 200,
+          "latency_ms": 271.699,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 19,
+          "status": 200,
+          "latency_ms": 273.719,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 20,
+          "status": 200,
+          "latency_ms": 216.001,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 21,
+          "status": 200,
+          "latency_ms": 229.353,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 22,
+          "status": 200,
+          "latency_ms": 244.864,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 23,
+          "status": 200,
+          "latency_ms": 196.272,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 24,
+          "status": 200,
+          "latency_ms": 224.687,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 25,
+          "status": 200,
+          "latency_ms": 237.479,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 26,
+          "status": 200,
+          "latency_ms": 230.738,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 27,
+          "status": 200,
+          "latency_ms": 231.302,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 28,
+          "status": 200,
+          "latency_ms": 206.877,
+          "response_bytes": 8693,
+          "identity_valid": true
+        }
+      ]
+    },
+    {
+      "requests": 16,
+      "concurrency": 8,
+      "wall_seconds": 0.6415,
+      "statuses": {
+        "200": 6,
+        "429": 10
+      },
+      "successful_requests_per_second": 9.353,
+      "successful_p50_ms": 397.741,
+      "successful_empirical_p95_ms": 565.839,
+      "samples": [
+        {
+          "index": 29,
+          "status": 200,
+          "latency_ms": 565.839,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 30,
+          "status": 200,
+          "latency_ms": 379.776,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 31,
+          "status": 200,
+          "latency_ms": 380.751,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 32,
+          "status": 200,
+          "latency_ms": 530.565,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 33,
+          "status": 429,
+          "latency_ms": 90.16,
+          "response_bytes": 132,
+          "identity_valid": true
+        },
+        {
+          "index": 34,
+          "status": 429,
+          "latency_ms": 141.222,
+          "response_bytes": 132,
+          "identity_valid": true
+        },
+        {
+          "index": 35,
+          "status": 429,
+          "latency_ms": 141.424,
+          "response_bytes": 132,
+          "identity_valid": true
+        },
+        {
+          "index": 36,
+          "status": 429,
+          "latency_ms": 98.769,
+          "response_bytes": 132,
+          "identity_valid": true
+        },
+        {
+          "index": 37,
+          "status": 429,
+          "latency_ms": 103.763,
+          "response_bytes": 132,
+          "identity_valid": true
+        },
+        {
+          "index": 38,
+          "status": 200,
+          "latency_ms": 533.988,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 39,
+          "status": 429,
+          "latency_ms": 80.852,
+          "response_bytes": 132,
+          "identity_valid": true
+        },
+        {
+          "index": 40,
+          "status": 429,
+          "latency_ms": 93.645,
+          "response_bytes": 132,
+          "identity_valid": true
+        },
+        {
+          "index": 41,
+          "status": 200,
+          "latency_ms": 397.741,
+          "response_bytes": 8693,
+          "identity_valid": true
+        },
+        {
+          "index": 42,
+          "status": 429,
+          "latency_ms": 40.952,
+          "response_bytes": 132,
+          "identity_valid": true
+        },
+        {
+          "index": 43,
+          "status": 429,
+          "latency_ms": 50.276,
+          "response_bytes": 132,
+          "identity_valid": true
+        },
+        {
+          "index": 44,
+          "status": 429,
+          "latency_ms": 56.305,
+          "response_bytes": 132,
+          "identity_valid": true
+        }
+      ]
+    }
+  ],
+  "financial_tables_unchanged": true,
+  "financial_tables_compared": 135,
+  "provider_and_model_calls": 0,
+  "limits": [
+    "Single Windows host and small certified dataset; not horizontal scalability evidence.",
+    "Empirical percentiles have only 12/16 samples per group; no p99 claim.",
+    "40 requests/minute and 4 active case reads are existing per-principal bounds; 429 is expected overload behavior.",
+    "Other local services share CPU/IO; no isolated CPU/memory attribution or production capacity claim."
+  ]
+}

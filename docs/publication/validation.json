@@ -1,0 +1,50 @@
+{
+  "classification": "ACTUAL_DIRECTIVE_021_LOCAL_VALIDATION",
+  "source_commit": "3322d283e769490ca39fb0c8c62fdb652d410479",
+  "offline_python": {
+    "passed": 82,
+    "warning": "Starlette TestClient/httpx deprecation"
+  },
+  "node": {
+    "passed": 33
+  },
+  "public_browser": {
+    "startTime": "2026-11-11T16:54:07.266Z",
+    "duration": 31901.999999999996,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "official_local_studio_browser": {
+    "startTime": "2026-11-11T16:49:20.606Z",
+    "duration": 17328.093999999997,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "financial_preservation": {
+    "system_identifier": "7706108909131505256",
+    "tables_unchanged": 135,
+    "financial_writes": 0,
+    "provider_calls": 0,
+    "migrations": 0
+  },
+  "prepublication_separate_git_clone": {
+    "npm_ci": "PASS",
+    "typecheck": "PASS",
+    "eslint": "PASS",
+    "static_build": "PASS",
+    "static_assets": 60,
+    "public_browser_passed": 16,
+    "node_passed": 33,
+    "worktree_clean_after_build": true,
+    "private_profiles_or_sessions_copied": false
+  },
+  "source_integrity": "47 financial UI guards and protected source paths unchanged",
+  "historical_sql_and_707_suite": "Not rerun",
+  "fresh_provider_or_model_calls": 0,
+  "github_ci": "NOT_CONFIGURED: owner explicitly chose publication without GitHub Actions.",
+  "publication_workflow_omission": ".github/workflows/public-demo.yml"
+}

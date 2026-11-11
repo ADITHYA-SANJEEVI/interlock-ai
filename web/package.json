@@ -1,0 +1,35 @@
+{
+  "name": "interlock-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "playwright test",
+    "demo:build": "node ../tools/release/build-demo.cjs",
+    "demo:serve": "node ../tools/release/serve-demo.cjs"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "5.104.1",
+    "ag-studio": "3.1.0",
+    "ag-studio-react": "3.1.0",
+    "next": "16.4.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "26.6.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "10.12.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "prettier": "3.9.9",
+    "typescript": "6.0.2",
+    "typescript-eslint": "8.71.0"
+  }
+}

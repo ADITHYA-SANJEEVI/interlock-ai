@@ -1,0 +1,243 @@
+.workbench {
+  margin: 0 0 28px;
+  min-width: 0;
+}
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 20px;
+  background: #21192e;
+  border: 1px solid #5c4276;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.signature > div {
+  flex: 1;
+}
+.signature h2 {
+  font-size: 20px !important;
+  margin: 6px 0 !important;
+}
+.signature p {
+  font-size: 12px;
+  margin: 4px 0 !important;
+}
+.signature p:first-child {
+  font:
+    10px/1.5 var(--font-mono),
+    monospace;
+  color: #c6afe9 !important;
+  letter-spacing: 1px;
+}
+.signature button {
+  font-size: 12px !important;
+}
+.journey {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+  margin-bottom: 22px;
+}
+.journey button {
+  text-align: left;
+  font-size: 11px !important;
+  line-height: 1.6;
+  min-height: 48px;
+}
+.journey small {
+  display: block;
+  color: #b8a6d8 !important;
+}
+.journey button[aria-current="step"] {
+  background: #352547 !important;
+  border-color: #c09ae8 !important;
+}
+@media (max-width: 760px) {
+  .signature {
+    display: block;
+    padding: 15px;
+  }
+  .signature button {
+    margin-top: 12px;
+    width: 100%;
+  }
+  .journey {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.heading p,
+.classification {
+  font:
+    10px/1.5 var(--font-mono),
+    monospace !important;
+  letter-spacing: 1px;
+  color: #c4aff1 !important;
+  margin: 0 !important;
+}
+.heading h2 {
+  font-size: 20px !important;
+  margin: 6px 0 0 !important;
+}
+.heading span {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #b2abc2;
+  text-align: right;
+}
+.questions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.questions button {
+  font-size: 12px !important;
+  text-align: left;
+  min-height: 44px;
+  padding: 10px 12px !important;
+  line-height: 1.5;
+}
+.questions button[aria-pressed="true"] {
+  background: #34264c !important;
+  border-color: #ba94fb !important;
+  color: #fff;
+}
+.answer {
+  margin-top: 16px;
+  padding: 19px 22px;
+  background: linear-gradient(120deg, #1d192d, #15141f);
+  border: 1px solid #514063;
+  border-left: 3px solid #bb95f1;
+  border-radius: 6px;
+}
+.answer[data-answer-status="recorded"] {
+  border-left-color: #a5e2ca;
+}
+.answer h3 {
+  font-size: 19px !important;
+  line-height: 1.4;
+  margin: 8px 0 !important;
+}
+.answer > p:last-child {
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 !important;
+  color: #c4bdd2 !important;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 14px 0;
+}
+.actions button {
+  font-size: 12px !important;
+  min-height: 44px;
+}
+.actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.actions small {
+  flex-basis: 100%;
+  font-size: 11px;
+}
+.citations,
+.comparison {
+  border-top: 1px solid #393146;
+  padding: 15px 0;
+  font-size: 12px;
+}
+.citations summary,
+.comparison summary {
+  cursor: pointer;
+  min-height: 30px;
+  color: #dacbed;
+  line-height: 1.8;
+}
+.citation {
+  display: grid;
+  gap: 6px;
+  padding: 14px 0;
+  border-top: 1px solid #332a40;
+}
+.citation pre {
+  max-height: 230px !important;
+  margin: 4px 0 !important;
+}
+.table {
+  overflow: auto;
+}
+.table table {
+  border-collapse: collapse;
+  font-size: 12px;
+  width: 100%;
+}
+.table th,
+.table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #3e334c;
+  overflow-wrap: anywhere;
+  min-width: 140px;
+}
+.table caption {
+  text-align: left;
+  padding: 12px 0;
+  color: #c3bad3;
+}
+.table td {
+  color: #c5bed2;
+  line-height: 1.7;
+}
+@media (max-width: 1100px) {
+  .questions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .heading {
+    align-items: flex-start;
+  }
+  .heading span {
+    max-width: 150px;
+  }
+}
+@media (max-width: 760px) {
+  .heading {
+    display: block;
+  }
+  .heading span {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    max-width: none;
+  }
+  .questions button {
+    font-size: 11px !important;
+  }
+  .answer {
+    padding: 16px;
+  }
+  .answer h3 {
+    font-size: 17px !important;
+  }
+  .actions {
+    display: grid;
+  }
+  .actions button {
+    width: 100%;
+  }
+  .actions small {
+    font-size: 11px;
+  }
+  .table th,
+  .table td {
+    min-width: 130px;
+  }
+}

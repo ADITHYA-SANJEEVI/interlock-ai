@@ -1,0 +1,25 @@
+{
+  "classification": "READ_ONLY_SOURCE_INTEGRITY_CHECK",
+  "baseline": "e6e545c8edba62d5c4b7049c650ffcca919e8406",
+  "frozen_release": "bf6f98dfd614061f1c5937dfc206fd5f2ee84cf8",
+  "workspace_financial_handlers_and_guards_unchanged": true,
+  "sole_normalized_ui_change": "Validated operation query pre-fills read-only load input; no automatic load or command",
+  "guard_and_event_attributes_unchanged": 47,
+  "protected_paths_unchanged": [
+    "backend/interlock/paypal*",
+    "backend/interlock/authority.py",
+    "backend/interlock/proposer.py",
+    "backend/interlock/investigation_reads.py",
+    "migrations",
+    "paypal_migrations",
+    "tests",
+    "web/app/api/paypal",
+    "web/app/api/investigations",
+    "web/app/api/logout",
+    "web/app/paypal/contracts.ts",
+    "web/app/paypal/studio-analyst.ts",
+    "web/package-lock.json"
+  ],
+  "frozen_migrations_tests_evidence_unchanged": true,
+  "logic_sha256": "c0b1062d798cd091bf55a6a865e39ff0cb10e560bdd70e499c1754b885d7bdce"
+}

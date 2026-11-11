@@ -1,0 +1,199 @@
+{
+  "contract_version": "operation-case-v1",
+  "classification": "AUTHENTICATED_RECORDED_SANDBOX_CASE",
+  "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+  "tenant_id": "interlock_m2_demo",
+  "read_at": "2026-11-11T03:12:33.674438+00:00",
+  "status": "UNRESOLVED_RECORDED_OUTCOME",
+  "next_action": "REVIEW_OPEN_FINDING_PRESERVE_OBLIGATIONS",
+  "operational_cautions": [
+    "Stored dispatch exposure remains EXPOSED_UNRESOLVED. Capture, accounting and fulfillment evidence do not close this separate record."
+  ],
+  "financial_authority": false,
+  "database_writes": false,
+  "provider_contacted": false,
+  "current_provider_state_established": false,
+  "cancellation": null,
+  "commercial": {
+    "seller": "workspace-seller-v1",
+    "merchant_id": "JB7TR6VHB4GTQ",
+    "amount_minor": 100,
+    "currency": "USD",
+    "quantity": 1,
+    "lines": [
+      {
+        "product_id": "workspace-seat",
+        "beneficiary": "alice",
+        "unit_price_minor": 100
+      }
+    ],
+    "quote_id": "usdquote_0a765cb49e8ce137a5953f0513115a9e3880405bb45025605a0d7f99fc46d126",
+    "quote_expires_at": "2026-11-10T04:18:37.337312+05:30",
+    "quote_expired": true,
+    "quote_integrity_hash": "a9f9d328773dc0975e785c7ef34aee469fd1e14ab93dbc8b82ae6f6006b4e3d0"
+  },
+  "authority": {
+    "action_id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+    "action_revision": 2,
+    "action_state": "ADMITTED",
+    "current_original_authority": false,
+    "evidence_id": "evidence_364ef4c6-9cb4-4252-ba68-26fdbbd4acac",
+    "decision_id": "decision_de02ce43-0bb8-4a76-9ad6-fa218e9fb6df",
+    "policy_version_id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e",
+    "policy_allowed_when_evaluated": true,
+    "approval_id": "approval_67764455-8205-4acb-aca1-92efe9c6cfc6",
+    "approval_details": {
+      "visible": false,
+      "status": "PERMISSION_LIMITED",
+      "approver": null,
+      "expires_at": null
+    },
+    "grant_id": "grant_1b6798be-6f4b-4929-9292-49b7bccfbbe1",
+    "grant_effective_status": "EXPIRED",
+    "grant_expires_at": "2026-11-10T06:03:31.760552+05:30",
+    "lifetime_budget": {
+      "bound": 100,
+      "consumed": 0,
+      "reserved": 100,
+      "free": 0
+    },
+    "reservation": {
+      "id": "reservation_4795abc4-c39c-4192-ad4d-0c5f26d25de8",
+      "amount_minor": 100,
+      "currency": "USD",
+      "status": "RESERVED",
+      "dispatch_exposure_state": "EXPOSED_UNRESOLVED",
+      "source_terms_digest": "432f8156fba2d705519662b292f7cf7c403e8b5e7f75a5d5e4d0cb3235a4ab9a"
+    }
+  },
+  "provider": {
+    "provider_order_id": "5NV48695TN707743S",
+    "provider_order_status": "APPROVED",
+    "capture_id": null,
+    "capture_confirmed": false,
+    "last_canonical_read_at": "2026-11-10T04:24:06.307815+05:30",
+    "receipt_id": "3cf3dab4-5642-488f-b1ef-b58821c37bec",
+    "create_committed": true,
+    "capture_committed": false
+  },
+  "economic": {
+    "facts": [],
+    "journals": [],
+    "journals_balanced": null
+  },
+  "seller": {
+    "fulfillment_recorded": false,
+    "live_seller_contacted": false
+  },
+  "reconciliation": {
+    "available": true,
+    "gaps": [
+      "CAPTURE_NOT_VERIFIED",
+      "NO_JOURNAL",
+      "FULFILLMENT_NOT_RECORDED"
+    ],
+    "runs": [
+      {
+        "id": "0460d686-f6db-41f9-a238-490173ac6bc9",
+        "state": "COMPLETE",
+        "completed_at": "2026-11-10T09:19:34.562766+05:30"
+      }
+    ],
+    "findings": [
+      {
+        "id": "4da55cbe-c20b-8bc5-3d76-ff1aeb6beef6",
+        "class": "MUTATION_OUTCOME_UNKNOWN",
+        "state": "OPEN",
+        "next_step": "RECHECK_MUTATION_OUTCOME",
+        "last_seen_at": "2026-11-10T09:19:34.545841+05:30"
+      }
+    ],
+    "bounded_history": true,
+    "empty_does_not_prove_absence": true
+  },
+  "timeline": [
+    {
+      "kind": "ACTION_RECORDED",
+      "at": "2026-11-10T04:03:38.800938+05:30",
+      "source_id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+      "source_system": "authority action",
+      "actor": "m2_requester",
+      "actor_evidence": "AUTHENTICATED_SOURCE_FIELD",
+      "note": null
+    },
+    {
+      "kind": "CAPACITY_RESERVED",
+      "at": "2026-11-10T04:08:27.407732+05:30",
+      "source_id": "reservation_4795abc4-c39c-4192-ad4d-0c5f26d25de8",
+      "source_system": "atomic admission",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Actor is not exposed by this reservation projection."
+    },
+    {
+      "kind": "OPERATION_ADMITTED",
+      "at": "2026-11-10T04:08:27.423887+05:30",
+      "source_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+      "source_system": "protected dispatch",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Bound requester: m2_requester; not a claim about the executor."
+    },
+    {
+      "kind": "PROVIDER_OBSERVATION_RECORDED",
+      "at": "2026-11-10T04:24:06.307815+05:30",
+      "source_id": "3cf3dab4-5642-488f-b1ef-b58821c37bec",
+      "source_system": "authenticated provider observation",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Observation timestamp, not an inferred payment-event timestamp. No new PayPal read."
+    },
+    {
+      "kind": "RECONCILIATION_FINDING_LAST_SEEN",
+      "at": "2026-11-10T09:19:34.545841+05:30",
+      "source_id": "4da55cbe-c20b-8bc5-3d76-ff1aeb6beef6",
+      "source_system": "stored reconciliation",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": null
+    },
+    {
+      "kind": "RECONCILIATION_RUN_RECORDED",
+      "at": "2026-11-10T09:19:34.562766+05:30",
+      "source_id": "0460d686-f6db-41f9-a238-490173ac6bc9",
+      "source_system": "stored reconciliation",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": "Run completion alone does not resolve open findings."
+    },
+    {
+      "kind": "POLICY_DECISION_RECORDED",
+      "at": null,
+      "source_id": "decision_de02ce43-0bb8-4a76-9ad6-fa218e9fb6df",
+      "source_system": "deterministic policy",
+      "actor": null,
+      "actor_evidence": "NOT_EXPOSED",
+      "note": null
+    }
+  ],
+  "integrity": {
+    "action_digest": "432f8156fba2d705519662b292f7cf7c403e8b5e7f75a5d5e4d0cb3235a4ab9a",
+    "evidence_digest": "3c0c6033d1be37d0749aa994c5010da1a794c0a0117df9b22f063f5d99022bfe",
+    "request_digest": "1680f4eae970464086a9b7dd433c101db1195ee9fa07ab2f7051707d3e8f6890",
+    "quote_digest": "a9f9d328773dc0975e785c7ef34aee469fd1e14ab93dbc8b82ae6f6006b4e3d0",
+    "meaning": "Existing source integrity hashes; not proof of an externally trusted signature."
+  },
+  "unavailable": [
+    "Current PayPal state",
+    "Private buyer/payment identity",
+    "Unexposed fact/posting/fulfillment timestamps",
+    "Provider mutation request identities are not returned by these scoped APIs"
+  ],
+  "redaction": {
+    "mode": "ALLOWLISTED_CASE_FIELDS",
+    "raw_transport_bodies_included": false,
+    "private_buyer_data_included": false,
+    "model_reasoning_included": false
+  },
+  "package_sha256": "62210008a1b79a458481db23166a78bf5c9face51377fca9a9e2054cf1a9023c"
+}

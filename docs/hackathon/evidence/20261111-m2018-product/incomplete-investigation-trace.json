@@ -1,0 +1,704 @@
+{
+  "contract_version": "investigation-v1",
+  "classification": "AUTHENTICATED_RECORDED_SANDBOX_EVIDENCE",
+  "run_id": "1a90d33d-d5eb-4453-b640-01696d72f3fb",
+  "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+  "tenant_id": "interlock_m2_demo",
+  "principal": "m2_owner",
+  "question": "Inspect the recorded authority and reservation, historical PayPal observation, economic facts, journal links, seller fulfillment and stored reconciliation findings. Explain missing evidence and select the bindings Studio report. No record changes or provider calls.",
+  "summary": "Authority is historical only: the action was ADMITTED against a signed controlled-seller quote with an independent approval bound (details hidden by permissions, so not evidence of missing approval), and a reservation exists — but the grant head shows the full lifetime amount reserved with no free budget, and original terms are expired, so this is not renewed capture authority. The recorded PayPal observation is APPROVED with no capture ID and capture verified=False, and it is >100k seconds stale with current provider state not established; separately there are zero economic facts, zero journals, no recorded seller fulfillment, and stored reconciliation is OPEN as MUTATION_OUTCOME_UNKNOWN with gaps CAPTURE_NOT_VERIFIED, NO_JOURNAL, FULFILLMENT_NOT_RECORDED. Missing evidence therefore includes any verified capture/COMPLETED state, any jurnal posting linked to a fact, and a seller fulfillment attestation; buyer APPROVED is not capture, and no settlement can be inferred. The bindings Studio report was requested and is pending browser rendering; no records were changed and no provider was contacted.",
+  "findings": [
+    {
+      "id": "authority.reservation",
+      "text": "Original reservation: USD 1.00 (100 minor units). Lifetime reserved=USD 1.00, free=USD 0.00. Original terms expired=True. This is not renewed capture authority.",
+      "source_ids": [
+        "source_1"
+      ]
+    },
+    {
+      "id": "authority.approval_visibility",
+      "text": "Original approval identity is bound: approval_67764455-8205-4acb-aca1-92efe9c6cfc6. Approval record details visible to this principal=False. A permission-limited view does not establish missing approval.",
+      "source_ids": [
+        "source_1"
+      ]
+    },
+    {
+      "id": "provider.observation",
+      "text": "Recorded PayPal status APPROVED; capture verified=False; capture ID=None. Observed at 2026-11-10T04:24:06.307815+05:30. This is a historical observation, not a new provider read.",
+      "source_ids": [
+        "source_2"
+      ]
+    },
+    {
+      "id": "economic.facts",
+      "text": "Recorded authenticated economic facts: 0.",
+      "source_ids": [
+        "source_3"
+      ]
+    },
+    {
+      "id": "ledger.journals",
+      "text": "Recorded journal groups: 0. Separate templates describe separate economic effects; their amounts are not one spending total.",
+      "source_ids": [
+        "source_4"
+      ]
+    },
+    {
+      "id": "seller.fulfillment",
+      "text": "Recorded controlled seller fulfillment=False; blocked=False. No fresh seller-state read was made.",
+      "source_ids": [
+        "source_5"
+      ]
+    },
+    {
+      "id": "reconciliation.comparison",
+      "text": "Read-only comparison: CAPTURE_NOT_VERIFIED, NO_JOURNAL, FULFILLMENT_NOT_RECORDED. Stored findings access=True. No reconciliation record was written.",
+      "source_ids": [
+        "source_6"
+      ]
+    }
+  ],
+  "all_findings": [
+    {
+      "id": "authority.reservation",
+      "text": "Original reservation: USD 1.00 (100 minor units). Lifetime reserved=USD 1.00, free=USD 0.00. Original terms expired=True. This is not renewed capture authority.",
+      "source_ids": [
+        "source_1"
+      ]
+    },
+    {
+      "id": "authority.approval_visibility",
+      "text": "Original approval identity is bound: approval_67764455-8205-4acb-aca1-92efe9c6cfc6. Approval record details visible to this principal=False. A permission-limited view does not establish missing approval.",
+      "source_ids": [
+        "source_1"
+      ]
+    },
+    {
+      "id": "provider.observation",
+      "text": "Recorded PayPal status APPROVED; capture verified=False; capture ID=None. Observed at 2026-11-10T04:24:06.307815+05:30. This is a historical observation, not a new provider read.",
+      "source_ids": [
+        "source_2"
+      ]
+    },
+    {
+      "id": "economic.facts",
+      "text": "Recorded authenticated economic facts: 0.",
+      "source_ids": [
+        "source_3"
+      ]
+    },
+    {
+      "id": "ledger.journals",
+      "text": "Recorded journal groups: 0. Separate templates describe separate economic effects; their amounts are not one spending total.",
+      "source_ids": [
+        "source_4"
+      ]
+    },
+    {
+      "id": "seller.fulfillment",
+      "text": "Recorded controlled seller fulfillment=False; blocked=False. No fresh seller-state read was made.",
+      "source_ids": [
+        "source_5"
+      ]
+    },
+    {
+      "id": "reconciliation.comparison",
+      "text": "Read-only comparison: CAPTURE_NOT_VERIFIED, NO_JOURNAL, FULFILLMENT_NOT_RECORDED. Stored findings access=True. No reconciliation record was written.",
+      "source_ids": [
+        "source_6"
+      ]
+    }
+  ],
+  "trace": [
+    {
+      "tool": "inspect_authority",
+      "call_id": "call_eb911215292d4ba5a8c19280",
+      "arguments": {
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9"
+      },
+      "source_id": "source_1",
+      "status": "OK",
+      "latency_ms": 78,
+      "response": {
+        "source_id": "source_1",
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+        "read_at": "2026-11-11T02:55:19.335520+00:00",
+        "data": {
+          "action": {
+            "id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+            "head": {
+              "status": "ADMITTED",
+              "revision": 2,
+              "action_id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+              "intent_id": "intent_9b317eee-ab26-4049-a9e0-6c6596627702",
+              "tenant_id": "interlock_m2_demo",
+              "intent_revision_id": "ir_3b4f5138-2739-4969-8cde-b5923010859b"
+            },
+            "kind": "PURCHASE",
+            "fresh": false,
+            "terms": {
+              "quote": {
+                "id": "usdquote_0a765cb49e8ce137a5953f0513115a9e3880405bb45025605a0d7f99fc46d126",
+                "lines": [
+                  {
+                    "sku": "workspace-seat",
+                    "unit_price": 100,
+                    "beneficiary": "alice",
+                    "allocation_id": "usdseat_dbc8a78873d34974a757edd74a05c40d"
+                  }
+                ],
+                "amount": 100,
+                "seller": "workspace-seller-v1",
+                "currency": "USD",
+                "provider": "PAYPAL_SANDBOX",
+                "revision": 1,
+                "tenant_id": "interlock_m2_demo",
+                "expires_at": "2026-11-10T04:18:37.337312+05:30",
+                "merchant_id": "JB7TR6VHB4GTQ"
+              },
+              "amount": 100,
+              "seller": "workspace-seller-v1",
+              "currency": "USD",
+              "provenance": "AUTHENTIC_SIGNED_CONTROLLED_SELLER",
+              "integration": "interlock_m2_paypal_us",
+              "quote_digest": "a9f9d328773dc0975e785c7ef34aee469fd1e14ab93dbc8b82ae6f6006b4e3d0"
+            },
+            "amount": 100,
+            "current": true,
+            "currency": "USD",
+            "decision": {
+              "id": "decision_de02ce43-0bb8-4a76-9ad6-fa218e9fb6df",
+              "allowed": true,
+              "reasons": [
+                "INDEPENDENT_APPROVAL_REQUIRED"
+              ],
+              "action_id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+              "tenant_id": "interlock_m2_demo",
+              "evidence_id": "evidence_364ef4c6-9cb4-4252-ba68-26fdbbd4acac",
+              "evaluated_at": "2026-11-10T04:03:38.810023+05:30",
+              "context_digest": "3c0c6033d1be37d0749aa994c5010da1a794c0a0117df9b22f063f5d99022bfe",
+              "approval_required": true,
+              "evaluator_version": "authority-v1",
+              "policy_version_id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e"
+            },
+            "evidence": {
+              "id": "evidence_364ef4c6-9cb4-4252-ba68-26fdbbd4acac",
+              "digest": "3c0c6033d1be37d0749aa994c5010da1a794c0a0117df9b22f063f5d99022bfe",
+              "quote_id": "usdquote_0a765cb49e8ce137a5953f0513115a9e3880405bb45025605a0d7f99fc46d126",
+              "action_id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+              "tenant_id": "interlock_m2_demo",
+              "created_at": "2026-11-10T04:03:38.804227+05:30",
+              "fixture_id": null,
+              "grant_epoch": 1,
+              "config_epoch": 2,
+              "quote_revision": 1,
+              "return_lock_id": null,
+              "fixture_revision": null,
+              "grant_version_id": "gv_2905cd0e-c7e6-4afd-baad-9c34555f3409",
+              "policy_version_id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e"
+            },
+            "grant_id": "grant_1b6798be-6f4b-4929-9292-49b7bccfbbe1",
+            "intent_id": "intent_9b317eee-ab26-4049-a9e0-6c6596627702",
+            "requester": "m2_requester",
+            "tenant_id": "interlock_m2_demo",
+            "created_at": "2026-11-10T04:03:38.800938+05:30",
+            "request_digest": "432f8156fba2d705519662b292f7cf7c403e8b5e7f75a5d5e4d0cb3235a4ab9a",
+            "contract_version": "paypal-v1",
+            "intent_revision_id": "ir_3b4f5138-2739-4969-8cde-b5923010859b",
+            "requester_revision": 1
+          },
+          "monetary_units": "All action/reservation/grant-head monetary integers are USD MINOR units (100 = USD 1.00), not dollars.",
+          "bound_approval_id": "approval_67764455-8205-4acb-aca1-92efe9c6cfc6",
+          "approval_record_visible": false,
+          "approval": [],
+          "grant_head": {
+            "status": "ACTIVE",
+            "bound": 100,
+            "consumed": 0,
+            "reserved": 100,
+            "free": 0
+          },
+          "reservation": {
+            "id": "reservation_4795abc4-c39c-4192-ad4d-0c5f26d25de8",
+            "amount": 100,
+            "currency": "USD",
+            "created_at": "2026-11-10T04:08:27.407732+05:30"
+          },
+          "original_terms_expired": true,
+          "note": "Approval/admission are historical authority, not current permission to capture. A bound approval whose details are not visible is permission-limited evidence, not proof that approval is missing. Reserved lifetime capacity is not free budget."
+        },
+        "findings": [
+          {
+            "id": "authority.reservation",
+            "text": "Original reservation: USD 1.00 (100 minor units). Lifetime reserved=USD 1.00, free=USD 0.00. Original terms expired=True. This is not renewed capture authority.",
+            "source_ids": [
+              "source_1"
+            ]
+          },
+          {
+            "id": "authority.approval_visibility",
+            "text": "Original approval identity is bound: approval_67764455-8205-4acb-aca1-92efe9c6cfc6. Approval record details visible to this principal=False. A permission-limited view does not establish missing approval.",
+            "source_ids": [
+              "source_1"
+            ]
+          }
+        ]
+      },
+      "response_sha256": "49bcd7c858a8868dc30ee5dead4e8efeda0e3f23cf38c6db2d1c3f7ec000d16b"
+    },
+    {
+      "tool": "inspect_provider",
+      "call_id": "call_a2ce41e78aea4882a845efd9",
+      "arguments": {
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9"
+      },
+      "source_id": "source_2",
+      "status": "OK",
+      "latency_ms": 0,
+      "response": {
+        "source_id": "source_2",
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+        "read_at": "2026-11-11T02:55:19.349340+00:00",
+        "data": {
+          "provider_order_id": "5NV48695TN707743S",
+          "provider_order_status": "APPROVED",
+          "capture_id": null,
+          "capture_confirmed": false,
+          "blocked": false,
+          "blocked_reason": null,
+          "last_canonical_read_at": "2026-11-10T04:24:06.307815+05:30",
+          "receipt_id": "3cf3dab4-5642-488f-b1ef-b58821c37bec",
+          "amount_minor": 100,
+          "currency": "USD",
+          "merchant_id": "JB7TR6VHB4GTQ",
+          "age_seconds": 100873,
+          "stale_for_current_provider_state": true,
+          "current_provider_state_established": false,
+          "provider_contacted": false
+        },
+        "findings": [
+          {
+            "id": "provider.observation",
+            "text": "Recorded PayPal status APPROVED; capture verified=False; capture ID=None. Observed at 2026-11-10T04:24:06.307815+05:30. This is a historical observation, not a new provider read.",
+            "source_ids": [
+              "source_2"
+            ]
+          }
+        ]
+      },
+      "response_sha256": "8dd5c187f03f8e2ca43bf7866562d8926817e1f5c68400238f2fe47d997f9e70"
+    },
+    {
+      "tool": "inspect_economic_facts",
+      "call_id": "call_8ce4ea12cc344b0394bb769b",
+      "arguments": {
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9"
+      },
+      "source_id": "source_3",
+      "status": "OK",
+      "latency_ms": 31,
+      "response": {
+        "source_id": "source_3",
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+        "read_at": "2026-11-11T02:55:19.366993+00:00",
+        "data": {
+          "facts": []
+        },
+        "findings": [
+          {
+            "id": "economic.facts",
+            "text": "Recorded authenticated economic facts: 0.",
+            "source_ids": [
+              "source_3"
+            ]
+          }
+        ]
+      },
+      "response_sha256": "55342915794a3a1d9aef1fbad96ff59c4af6b645af81f9f87883d99a3b06cc73"
+    },
+    {
+      "tool": "inspect_ledger",
+      "call_id": "call_a80d4d651a1c4996bc927cc2",
+      "arguments": {
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9"
+      },
+      "source_id": "source_4",
+      "status": "OK",
+      "latency_ms": 0,
+      "response": {
+        "source_id": "source_4",
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+        "read_at": "2026-11-11T02:55:19.380852+00:00",
+        "data": {
+          "journals": []
+        },
+        "findings": [
+          {
+            "id": "ledger.journals",
+            "text": "Recorded journal groups: 0. Separate templates describe separate economic effects; their amounts are not one spending total.",
+            "source_ids": [
+              "source_4"
+            ]
+          }
+        ]
+      },
+      "response_sha256": "42cbc5ec8908d8f237268ee920fea2b3ad3e42bcf4a69f1123e468b8fec79ef3"
+    },
+    {
+      "tool": "inspect_fulfillment",
+      "call_id": "call_55adb522524344a2bb9feb0a",
+      "arguments": {
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9"
+      },
+      "source_id": "source_5",
+      "status": "OK",
+      "latency_ms": 16,
+      "response": {
+        "source_id": "source_5",
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+        "read_at": "2026-11-11T02:55:19.394808+00:00",
+        "data": {
+          "seller_fulfilled": false,
+          "blocked": false,
+          "facts": [],
+          "live_seller_contacted": false
+        },
+        "findings": [
+          {
+            "id": "seller.fulfillment",
+            "text": "Recorded controlled seller fulfillment=False; blocked=False. No fresh seller-state read was made.",
+            "source_ids": [
+              "source_5"
+            ]
+          }
+        ]
+      },
+      "response_sha256": "b80c7ba65b3ad3bc6bd189b733ebc413c7611744024ca53c90a7578de092bcb0"
+    },
+    {
+      "tool": "reconcile_records",
+      "call_id": "call_34025f936e04499b8948a707",
+      "arguments": {
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9"
+      },
+      "source_id": "source_6",
+      "status": "OK",
+      "latency_ms": 31,
+      "response": {
+        "source_id": "source_6",
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+        "read_at": "2026-11-11T02:55:19.423615+00:00",
+        "data": {
+          "mode": "READ_ONLY_COMPARISON_OF_RECORDED_EVIDENCE",
+          "evaluated_at": "2026-11-11T02:55:19.423615+00:00",
+          "gaps": [
+            "CAPTURE_NOT_VERIFIED",
+            "NO_JOURNAL",
+            "FULFILLMENT_NOT_RECORDED"
+          ],
+          "journals_balanced": null,
+          "stored_reconciliation": {
+            "available": true,
+            "runs": [
+              {
+                "id": "0460d686-f6db-41f9-a238-490173ac6bc9",
+                "state": "COMPLETE",
+                "completed_at": "2026-11-10T09:19:34.562766+05:30",
+                "members": [
+                  {
+                    "state": "RECORDED",
+                    "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+                    "evidence_count": 1
+                  }
+                ]
+              }
+            ],
+            "findings": [
+              {
+                "id": "4da55cbe-c20b-8bc5-3d76-ff1aeb6beef6",
+                "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+                "class": "MUTATION_OUTCOME_UNKNOWN",
+                "state": "OPEN",
+                "next_step": "RECHECK_MUTATION_OUTCOME",
+                "last_seen_at": "2026-11-10T09:19:34.545841+05:30"
+              }
+            ],
+            "bounded_inventory": true
+          },
+          "provider_contacted": false,
+          "database_writes": false,
+          "current_provider_state_established": false
+        },
+        "findings": [
+          {
+            "id": "reconciliation.comparison",
+            "text": "Read-only comparison: CAPTURE_NOT_VERIFIED, NO_JOURNAL, FULFILLMENT_NOT_RECORDED. Stored findings access=True. No reconciliation record was written.",
+            "source_ids": [
+              "source_6"
+            ]
+          }
+        ]
+      },
+      "response_sha256": "52dc293cc1551dfbcc75df4241fc43e4b39e51424b75a26b6b6fa77ce53c7286"
+    },
+    {
+      "tool": "select_studio_view",
+      "call_id": "call_df2daef29a5846e5bf0f67c9",
+      "arguments": {
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+        "page_id": "bindings"
+      },
+      "source_id": "source_7",
+      "status": "OK",
+      "latency_ms": 0,
+      "response": {
+        "source_id": "source_7",
+        "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+        "read_at": "2026-11-11T02:55:19.425633+00:00",
+        "data": {
+          "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+          "page_id": "bindings",
+          "requested_by_model": true,
+          "execution": "PENDING_BROWSER_SDK"
+        },
+        "findings": []
+      },
+      "response_sha256": "5ff194f968c86aee349c56824e8247e289f91751289bf43d5989b9a6f244da68"
+    }
+  ],
+  "model_turns": [
+    {
+      "http_status": 200,
+      "latency_ms": 4360,
+      "response_sha256": "d05779684534d4dae0b0ccbd73ecce23ac05e6b7680edf609a7891920e8b3a93"
+    },
+    {
+      "http_status": 200,
+      "latency_ms": 5157,
+      "response_sha256": "2962970b00b5163371811671868c27b20dacb039ed9fcb0fdd29152ae1a057f9"
+    }
+  ],
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "provider": "openai-compatible",
+  "actual_model_invocation": true,
+  "tool_execution_count": 7,
+  "final_schema_repair_requested": false,
+  "latency_ms": 9766,
+  "view_request": {
+    "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+    "page_id": "bindings",
+    "requested_by_model": true,
+    "execution": "PENDING_BROWSER_SDK"
+  },
+  "recorded_evidence": {
+    "action_id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+    "evidence_id": "evidence_364ef4c6-9cb4-4252-ba68-26fdbbd4acac",
+    "decision_id": "decision_de02ce43-0bb8-4a76-9ad6-fa218e9fb6df",
+    "contract_version": "paypal-v1",
+    "classification": "PROTECTED_PAYPAL_SANDBOX",
+    "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+    "approval_id": "approval_67764455-8205-4acb-aca1-92efe9c6cfc6",
+    "reservation_id": "reservation_4795abc4-c39c-4192-ad4d-0c5f26d25de8",
+    "merchant_id": "JB7TR6VHB4GTQ",
+    "amount_minor": 100,
+    "currency": "USD",
+    "provider_order_id": "5NV48695TN707743S",
+    "provider_order_status": "APPROVED",
+    "capture_id": null,
+    "capture_confirmed": false,
+    "blocked": false,
+    "blocked_reason": null,
+    "revision": 25,
+    "dispatch_revision": 25,
+    "last_canonical_read_at": "2026-11-10T04:24:06.307815+05:30",
+    "receipt_id": "3cf3dab4-5642-488f-b1ef-b58821c37bec",
+    "create_committed": true,
+    "capture_committed": false,
+    "settlement": "UNVERIFIED",
+    "cancellation": null,
+    "facts": [],
+    "journals": [],
+    "seller_fulfilled": false
+  },
+  "read_at": "2026-11-11T02:55:24.620188+00:00",
+  "financial_authority": false,
+  "provider_contacted": false,
+  "database_writes": false,
+  "next_action": "Review the cited records. No further payment action is authorized.",
+  "observations": {
+    "inspect_authority": {
+      "action": {
+        "id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+        "head": {
+          "status": "ADMITTED",
+          "revision": 2,
+          "action_id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+          "intent_id": "intent_9b317eee-ab26-4049-a9e0-6c6596627702",
+          "tenant_id": "interlock_m2_demo",
+          "intent_revision_id": "ir_3b4f5138-2739-4969-8cde-b5923010859b"
+        },
+        "kind": "PURCHASE",
+        "fresh": false,
+        "terms": {
+          "quote": {
+            "id": "usdquote_0a765cb49e8ce137a5953f0513115a9e3880405bb45025605a0d7f99fc46d126",
+            "lines": [
+              {
+                "sku": "workspace-seat",
+                "unit_price": 100,
+                "beneficiary": "alice",
+                "allocation_id": "usdseat_dbc8a78873d34974a757edd74a05c40d"
+              }
+            ],
+            "amount": 100,
+            "seller": "workspace-seller-v1",
+            "currency": "USD",
+            "provider": "PAYPAL_SANDBOX",
+            "revision": 1,
+            "tenant_id": "interlock_m2_demo",
+            "expires_at": "2026-11-10T04:18:37.337312+05:30",
+            "merchant_id": "JB7TR6VHB4GTQ"
+          },
+          "amount": 100,
+          "seller": "workspace-seller-v1",
+          "currency": "USD",
+          "provenance": "AUTHENTIC_SIGNED_CONTROLLED_SELLER",
+          "integration": "interlock_m2_paypal_us",
+          "quote_digest": "a9f9d328773dc0975e785c7ef34aee469fd1e14ab93dbc8b82ae6f6006b4e3d0"
+        },
+        "amount": 100,
+        "current": true,
+        "currency": "USD",
+        "decision": {
+          "id": "decision_de02ce43-0bb8-4a76-9ad6-fa218e9fb6df",
+          "allowed": true,
+          "reasons": [
+            "INDEPENDENT_APPROVAL_REQUIRED"
+          ],
+          "action_id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+          "tenant_id": "interlock_m2_demo",
+          "evidence_id": "evidence_364ef4c6-9cb4-4252-ba68-26fdbbd4acac",
+          "evaluated_at": "2026-11-10T04:03:38.810023+05:30",
+          "context_digest": "3c0c6033d1be37d0749aa994c5010da1a794c0a0117df9b22f063f5d99022bfe",
+          "approval_required": true,
+          "evaluator_version": "authority-v1",
+          "policy_version_id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e"
+        },
+        "evidence": {
+          "id": "evidence_364ef4c6-9cb4-4252-ba68-26fdbbd4acac",
+          "digest": "3c0c6033d1be37d0749aa994c5010da1a794c0a0117df9b22f063f5d99022bfe",
+          "quote_id": "usdquote_0a765cb49e8ce137a5953f0513115a9e3880405bb45025605a0d7f99fc46d126",
+          "action_id": "action_dacb1d79-d489-41cf-9954-929d1097379c",
+          "tenant_id": "interlock_m2_demo",
+          "created_at": "2026-11-10T04:03:38.804227+05:30",
+          "fixture_id": null,
+          "grant_epoch": 1,
+          "config_epoch": 2,
+          "quote_revision": 1,
+          "return_lock_id": null,
+          "fixture_revision": null,
+          "grant_version_id": "gv_2905cd0e-c7e6-4afd-baad-9c34555f3409",
+          "policy_version_id": "pv_6ec77155-4951-4dc9-890a-fad47dcea86e"
+        },
+        "grant_id": "grant_1b6798be-6f4b-4929-9292-49b7bccfbbe1",
+        "intent_id": "intent_9b317eee-ab26-4049-a9e0-6c6596627702",
+        "requester": "m2_requester",
+        "tenant_id": "interlock_m2_demo",
+        "created_at": "2026-11-10T04:03:38.800938+05:30",
+        "request_digest": "432f8156fba2d705519662b292f7cf7c403e8b5e7f75a5d5e4d0cb3235a4ab9a",
+        "contract_version": "paypal-v1",
+        "intent_revision_id": "ir_3b4f5138-2739-4969-8cde-b5923010859b",
+        "requester_revision": 1
+      },
+      "monetary_units": "All action/reservation/grant-head monetary integers are USD MINOR units (100 = USD 1.00), not dollars.",
+      "bound_approval_id": "approval_67764455-8205-4acb-aca1-92efe9c6cfc6",
+      "approval_record_visible": false,
+      "approval": [],
+      "grant_head": {
+        "status": "ACTIVE",
+        "bound": 100,
+        "consumed": 0,
+        "reserved": 100,
+        "free": 0
+      },
+      "reservation": {
+        "id": "reservation_4795abc4-c39c-4192-ad4d-0c5f26d25de8",
+        "amount": 100,
+        "currency": "USD",
+        "created_at": "2026-11-10T04:08:27.407732+05:30"
+      },
+      "original_terms_expired": true,
+      "note": "Approval/admission are historical authority, not current permission to capture. A bound approval whose details are not visible is permission-limited evidence, not proof that approval is missing. Reserved lifetime capacity is not free budget."
+    },
+    "inspect_provider": {
+      "provider_order_id": "5NV48695TN707743S",
+      "provider_order_status": "APPROVED",
+      "capture_id": null,
+      "capture_confirmed": false,
+      "blocked": false,
+      "blocked_reason": null,
+      "last_canonical_read_at": "2026-11-10T04:24:06.307815+05:30",
+      "receipt_id": "3cf3dab4-5642-488f-b1ef-b58821c37bec",
+      "amount_minor": 100,
+      "currency": "USD",
+      "merchant_id": "JB7TR6VHB4GTQ",
+      "age_seconds": 100873,
+      "stale_for_current_provider_state": true,
+      "current_provider_state_established": false,
+      "provider_contacted": false
+    },
+    "inspect_economic_facts": {
+      "facts": []
+    },
+    "inspect_ledger": {
+      "journals": []
+    },
+    "inspect_fulfillment": {
+      "seller_fulfilled": false,
+      "blocked": false,
+      "facts": [],
+      "live_seller_contacted": false
+    },
+    "reconcile_records": {
+      "mode": "READ_ONLY_COMPARISON_OF_RECORDED_EVIDENCE",
+      "evaluated_at": "2026-11-11T02:55:19.423615+00:00",
+      "gaps": [
+        "CAPTURE_NOT_VERIFIED",
+        "NO_JOURNAL",
+        "FULFILLMENT_NOT_RECORDED"
+      ],
+      "journals_balanced": null,
+      "stored_reconciliation": {
+        "available": true,
+        "runs": [
+          {
+            "id": "0460d686-f6db-41f9-a238-490173ac6bc9",
+            "state": "COMPLETE",
+            "completed_at": "2026-11-10T09:19:34.562766+05:30",
+            "members": [
+              {
+                "state": "RECORDED",
+                "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+                "evidence_count": 1
+              }
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "id": "4da55cbe-c20b-8bc5-3d76-ff1aeb6beef6",
+            "operation_id": "op_ad9410eb8f604b28bc6c31f74836e2e9",
+            "class": "MUTATION_OUTCOME_UNKNOWN",
+            "state": "OPEN",
+            "next_step": "RECHECK_MUTATION_OUTCOME",
+            "last_seen_at": "2026-11-10T09:19:34.545841+05:30"
+          }
+        ],
+        "bounded_inventory": true
+      },
+      "provider_contacted": false,
+      "database_writes": false,
+      "current_provider_state_established": false
+    }
+  }
+}

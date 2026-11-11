@@ -1,0 +1,6 @@
+CREATE DATABASE control;
+CREATE DATABASE seller;
+CREATE DATABASE reference;
+CREATE DATABASE test_control;
+CREATE DATABASE test_seller;
+CREATE DATABASE test_reference;
