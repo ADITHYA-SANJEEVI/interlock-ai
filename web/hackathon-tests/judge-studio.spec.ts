@@ -109,6 +109,17 @@ test("official Studio filters, edits, saves, restores and applies recorded Agent
     ),
   ).toBeVisible();
   await expect(studio.locator("[data-report-page=bindings]")).toBeVisible();
+  // Inspect actual native grid cells, rather than accepting a host React flag
+  // as proof that the official report changed after Agent Framework execution.
+  await expect(
+    studio.getByRole("columnheader").filter({ hasText: /order.?id/i }).first(),
+  ).toBeVisible();
+  await expect(
+    studio.getByRole("gridcell", { name: "5NV48695TN707743S", exact: true }),
+  ).toBeVisible();
+  await expect(
+    studio.getByRole("gridcell", { name: "APPROVED", exact: true }),
+  ).toBeVisible();
   await expect(
     studio.getByText("Recorded tool choices applied (7)", { exact: true }),
   ).toBeVisible();

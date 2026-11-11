@@ -374,9 +374,10 @@
     },
     {
       "path": "docs/README.md",
-      "bytes": 770,
-      "sha256": "932e455d18b5cbf92fb2e82e62fc73a9149ae89f9bc282460fe9e3a801b2ffcd",
-      "original_blob_sha256": "932e455d18b5cbf92fb2e82e62fc73a9149ae89f9bc282460fe9e3a801b2ffcd"
+      "bytes": 1152,
+      "sha256": "90f7a5d86a478c1f5ebdeb6b13b3fa7051a7fde3859f4949147852bbe8727bd4",
+      "original_blob_sha256": "932e455d18b5cbf92fb2e82e62fc73a9149ae89f9bc282460fe9e3a801b2ffcd",
+      "packaging_exception": "Link the actual Directive 023 release/access documentation."
     },
     {
       "path": "docs/agents.md",
@@ -2651,9 +2652,10 @@
     },
     {
       "path": "web/hackathon-tests/judge-studio.spec.ts",
-      "bytes": 4326,
-      "sha256": "85007268bfc60c24cba064001fafb41415567f0675fbaf812d44bf47c3c818b2",
-      "original_blob_sha256": "85007268bfc60c24cba064001fafb41415567f0675fbaf812d44bf47c3c818b2"
+      "bytes": 4817,
+      "sha256": "67a2f47b09b62f8d01bf29009565ff5f3537db44725985c8ce246a03471be697",
+      "original_blob_sha256": "67a2f47b09b62f8d01bf29009565ff5f3537db44725985c8ce246a03471be697",
+      "source_commit": "ecd020a5107fa41261f3c0d727ae6ee23350e087"
     },
     {
       "path": "web/hackathon-tests/judge.spec.ts",
@@ -2882,6 +2884,34 @@
       "bytes": 608,
       "sha256": "54232eaa84ecf5a60f279b496324faaa0d645265449aace17cc97eef0fb2a0be",
       "original_blob_sha256": "54232eaa84ecf5a60f279b496324faaa0d645265449aace17cc97eef0fb2a0be"
+    },
+    {
+      "path": "docs/DEPLOYMENT_023_RENDER.md",
+      "bytes": 4202,
+      "sha256": "e89714ae45be506879210c02dc740874b6c173c6145ec9d6ac4e1fda4be5f830",
+      "original_blob_sha256": "e89714ae45be506879210c02dc740874b6c173c6145ec9d6ac4e1fda4be5f830",
+      "source_commit": "ecd020a5107fa41261f3c0d727ae6ee23350e087"
+    },
+    {
+      "path": "docs/AG_STUDIO_023_JUDGING_ACCESS.md",
+      "bytes": 3811,
+      "sha256": "a812acc0883f4b5831473ef532ad62d326b45c4254efd04cdb92b766f81b5ee6",
+      "original_blob_sha256": "a812acc0883f4b5831473ef532ad62d326b45c4254efd04cdb92b766f81b5ee6",
+      "source_commit": "ecd020a5107fa41261f3c0d727ae6ee23350e087"
+    },
+    {
+      "path": "docs/PROTECTED_FLOW_023_REVIEW.md",
+      "bytes": 7931,
+      "sha256": "22fb6ddbf4fc050581fea4ba66420ebbcbe6caa08167945753ea260ecc34749e",
+      "original_blob_sha256": "22fb6ddbf4fc050581fea4ba66420ebbcbe6caa08167945753ea260ecc34749e",
+      "source_commit": "ecd020a5107fa41261f3c0d727ae6ee23350e087"
+    },
+    {
+      "path": "docs/JUDGING_023_REVIEW.md",
+      "bytes": 5045,
+      "sha256": "682a050de8f437d169ba983269aa4f20ca79fbf96900c873ecf7675b0cfec61f",
+      "original_blob_sha256": "682a050de8f437d169ba983269aa4f20ca79fbf96900c873ecf7675b0cfec61f",
+      "source_commit": "ecd020a5107fa41261f3c0d727ae6ee23350e087"
     }
   ],
   "publication_packaging_exceptions": {
@@ -2893,5 +2923,21 @@
       "docs/reproduction.md"
     ],
     "reason": "Owner explicitly chose source publication without GitHub Actions after OAuth workflow-scope rejection. Original repository and rejected candidate preserved; no public branch existed."
-  }
+  },
+  "source_updates": [
+    {
+      "directive": "023",
+      "source_commit": "ecd020a5107fa41261f3c0d727ae6ee23350e087",
+      "paths": [
+        "docs/DEPLOYMENT_023_RENDER.md",
+        "docs/AG_STUDIO_023_JUDGING_ACCESS.md",
+        "docs/PROTECTED_FLOW_023_REVIEW.md",
+        "docs/JUDGING_023_REVIEW.md",
+        "web/hackathon-tests/judge-studio.spec.ts"
+      ],
+      "application_financial_code_changed": false,
+      "original_history_distributed": false,
+      "description": "Native Studio grid-content regression plus audited deployment, access and skeptical review documents."
+    }
+  ]
 }

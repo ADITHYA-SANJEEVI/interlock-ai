@@ -1,0 +1,59 @@
+{
+  "classification": "ACTUAL_DIRECTIVE_023_FOCUSED_VERIFICATION",
+  "checked_at": "2026-11-11T20:24:39.736338+00:00",
+  "application_base_public_commit": "99a707bac5263ffd090b57e72a7843495397eebc",
+  "local_update_commit": "ecd020a5107fa41261f3c0d727ae6ee23350e087",
+  "runtime_code_or_dependency_changes": false,
+  "ai_offline_python_passed": 82,
+  "provider_proposer_isolation_offline_python_passed": 66,
+  "additional_provider_subtests_passed": 36,
+  "node_tests_passed": 33,
+  "public_browser_passed": 16,
+  "official_studio_browser_passed": 1,
+  "official_studio_native_grid_content_verified": true,
+  "typecheck": "PASS",
+  "eslint": "PASS",
+  "static_build": "PASS",
+  "public_clone_install_build_and_tests": "PASS",
+  "static_preflight": {
+    "routes": 11,
+    "mobile_widths": [
+      390,
+      820
+    ],
+    "page_errors": 0,
+    "unexpected_requests": 0,
+    "hosted_render_or_tls_test": false
+  },
+  "authenticated_private_read_review": {
+    "classification": "DIRECTIVE_023_AUTHENTICATED_READ_ONLY_REVIEW",
+    "tables_compared": 135,
+    "financial_tables_unchanged": true,
+    "exit_code": 0,
+    "approver_session_used": false,
+    "model_provider_or_financial_commands": 0
+  },
+  "production_dependency_advisories": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "development_dependency_advisories": {
+    "moderate": 9,
+    "high": 1
+  },
+  "hosting": "BLOCKED_HOSTING: operator chose manual deployment handoff; no authenticated Render deployment.",
+  "studio_access": "LOCAL_EVALUATION_ONLY: public runtime/key/media permission remains unconfirmed; request draft unsent.",
+  "github_actions": "NOT_CONFIGURED_BY_OWNER_DECISION",
+  "fresh_model_calls": 0,
+  "paypal_calls": 0,
+  "financial_mutations": 0,
+  "sql_acceptance_and_707_suite": "Historical evidence retained; not rerun.",
+  "recovered_harness_issues": [
+    "Absent-booking assertion corrected to actual UI wording; no UI/data change.",
+    "Screenshot-resized test video rejected; fixed-viewport dedicated recording passed decoding/frame checks."
+  ]
+}
